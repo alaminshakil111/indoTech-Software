@@ -1,0 +1,294 @@
+/* Light Mode Colors */
+:root {
+  --primary-color: #444a4e;
+  --secondary-color: #FF5650;
+  --background-color: #ffffff;
+  --hover-border-color: #336DBC;
+  --border-color: #0000006b;
+  --nav-hover-color: #338EC4;
+  --nav-active-color: #338EC4; 
+  --services-background-color: #DAE7F6;
+  --solutions-backgrond-color: #DAE7F680;
+
+  
+}
+
+/* Dark Mode Colors */
+:root.dark {
+  --primary-color: #c4c6c7;
+  --secondary-color: #338EC4;
+  --background-color: #1f1f1f;
+  --hover-border-color: #FF5650;
+  --border-color: #bfbfbf6b;
+  --nav-hover-color: #338EC4;
+  --nav-active-color: #338EC4;
+  --services-background-color: #101828;
+  --solutions-backgrond-color: #101828;
+
+}
+body{
+  font-family: 'Karla', sans-serif;
+}
+body p{
+  font-size: 16px;
+}
+.containerCustom{
+  max-width: 1500px;
+  margin: 0 auto; 
+
+}
+.servicesSection{
+  background-color: var(--services-background-color);
+}
+.solutionsSection{
+  background-color: var(--solutions-backgrond-color);
+}
+.textColor{
+  color: var(--primary-color);
+}
+
+.borderColor{
+  color: var(--border-color);
+
+}
+
+.nav-link {
+  color: var(--primary-color);
+  position: relative;
+  padding: 0px 2px 0px 2px;;
+  display: flex;
+  text-decoration: none;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--nav-hover-color);
+}
+.active-link {
+  color: var(--nav-active-color);
+}
+
+/* underline animation */
+/* .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #338EC4;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+} */
+
+/* Active (Light Mode) */
+
+
+/* .active-link::after {
+  width: 100%;
+} */
+
+/* ✅ DARK MODE */
+
+
+/* .dark .nav-link::after {
+  background-color: #338EC4;
+} */
+
+
+
+
+/* button typhographi */
+
+.btnBorder {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border 0.3s, color 0.3s;
+}
+
+.btnBorder:hover {
+  border: 2px solid var(--hover-border-color);
+}
+
+.btnGradient {
+  color: white; 
+  background: linear-gradient(90deg, #336DBC 0%, #FF5650 100%);
+  padding: 10px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-size: 150% 100%;
+  background-position: left center;
+  transition: background-position 0.3s ease, transform 0.3s ease;
+  font-size: 15px;
+}
+
+.btnGradient:hover {
+  background-position: right center;
+}
+
+.cardButton {
+  color: white; 
+  background: linear-gradient(90deg, #336DBC 0%, #FF5650 100%);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background-size: 150% 100%;
+  background-position: left center;
+  transition: background-position 0.3s ease, transform 0.3s ease;
+  font-size: 15px;
+
+}
+
+.cardButton:hover {
+  background-position: right center;
+
+}
+
+/* slider bllets  */
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-bullet-active {
+  width: 30px; /* wider than others */
+  background: #338EC4; /* active color */
+}
+/* Override Swiper default bullet layout */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: auto !important;
+  left: 50% !important;
+  right: auto;
+  transform: translateX(-50%) !important;
+  bottom: 10px !important;
+  display: flex !important;
+  gap: 8px !important;
+}
+
+/* software details image bouncing */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+/* wavy line curve animation */
+
+
+@keyframes drawWave {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.wavy-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawWave 5s linear infinite;
+}
+
+.second-wave {
+  animation-delay: -3s;
+}
+
+
+/* agile icon hover border clor */
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-border {
+  animation: gradient-move 3s linear infinite;
+}
+
+/* 
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+} */
+
+/* Infinite scrolling animation */
+/* First row → scroll left */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.carousel-scroll {
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+/* keep your existing keyframes */
+@keyframes scrollnet {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* run the animation reversed so it moves right */
+.carouselNet-scrollnet {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: scrollnet 12s linear infinite reverse;
+}
+
+/* Contact form */
+
+.css-5h82ro-MuiInputBase-root-MuiInput-root::before,
+.css-ed63ti-MuiInputBase-root-MuiInput-root::before {
+    border-bottom: 1px solid var(--border-color)!important;
+}
+.css-2hy7sk-MuiFormLabel-root-MuiInputLabel-root{
+  color: var(--primary-color)!important;
+}
+
+.css-1ew92b2-MuiFormLabel-root-MuiInputLabel-root {
+    color: var(--primary-color)!important;
+    /* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
+}
+
+.css-1yrc8ca-MuiInputBase-input-MuiInput-input {
+    color: var(--primary-color)!important;
+}
+.css-9j73qj-MuiInputBase-input-MuiInput-input{
+    color: var(--primary-color)!important;
+
+}
