@@ -1,7 +1,7 @@
 /* Light Mode Colors */
 :root {
   --primary-color: #444a4e;
-  --secondary-color: #FF5650;
+  --secondary-color: #84B2D9;
   --background-color: #ffffff;
   --hover-border-color: #336DBC;
   --border-color: #0000006b;
@@ -18,7 +18,7 @@
   --primary-color: #c4c6c7;
   --secondary-color: #338EC4;
   --background-color: #1f1f1f;
-  --hover-border-color: #FF5650;
+  --hover-border-color: #84B2D9;
   --border-color: #bfbfbf6b;
   --nav-hover-color: #338EC4;
   --nav-active-color: #338EC4;
@@ -53,7 +53,7 @@ body p{
 }
 
 .nav-link {
-  color: var(--primary-color);
+  color: #fff;
   position: relative;
   padding: 0px 2px 0px 2px;;
   display: flex;
@@ -105,36 +105,58 @@ body p{
 /* button typhographi */
 
 .btnBorder {
-  color: var(--primary-color);
-  background-color: transparent;
-  border: 2px solid var(--secondary-color);
-  padding: 5px 10px;
-  border-radius: 15px;
+  color: #fff;
+  background-color: #4992C1;
+  padding: 13% 13% 13% 13%;
+  border-top-left-radius: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: border 0.3s, color 0.3s;
+  transition: 0.2s ease;
+
 }
 
 .btnBorder:hover {
-  border: 2px solid var(--hover-border-color);
+    color: white;
+  transition: 0.2s ease;
+  box-shadow: 0px 0px 3px 1px #4f679f;
 }
 
 .btnGradient {
-  color: white; 
-  background: linear-gradient(90deg, #336DBC 0%, #FF5650 100%);
-  padding: 10px 10px;
-  border-radius: 15px;
+  color: white;
+  background: #4992C1;
+  padding: 10px 15px;
+  border-radius: 130px 40px 130px 40px;
   font-weight: 600;
   cursor: pointer;
-  background-size: 150% 100%;
-  background-position: left center;
-  transition: background-position 0.3s ease, transform 0.3s ease;
   font-size: 15px;
+  position: relative;
+  transition: 0.2s ease;
+
+  /* overflow: hidden!important; */
 }
 
+/* .btnGradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(83, 78, 78, 0.25);
+  border-radius: 130px 40px 130px 40px;
+  color: white;
+  transition: bottom 0.4s ease;
+  opacity: 0;
+} */
+
 .btnGradient:hover {
-  background-position: right center;
+  /* opacity: 100%; */
+  color: white;
+  transition: 0.2s ease;
+  box-shadow: 0px 0px 3px 1px #4f679f;
+
 }
+
 
 .cardButton {
   color: white; 

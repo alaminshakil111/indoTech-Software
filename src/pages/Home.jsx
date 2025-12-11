@@ -11,6 +11,8 @@ import SocialLink from '@/component/SocialLink';
 import Footer from '@/component/Footer';
 import Software from '@/component/Software';
 import InfiniteCarousel from '@/component/InfiniteCarousel';
+import OurConcepts from '@/component/OurConcepts';
+import Advantage from '@/component/Advantage';
 
 const Home = () => {
     
@@ -18,11 +20,12 @@ const Home = () => {
         <>
             
             <Hero/>
-            {/* <Software/>
             <Services/>
+            {/* <Advantage/> */}
+            <OurConcepts/>
             <AdvanceTech/>
             <Solutions/>
-            <InfiniteCarousel/> */}
+            <InfiniteCarousel/>
 
             
             
