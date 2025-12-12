@@ -21,11 +21,9 @@ const Home = () => {
             
             <Hero/>
             <Services/>
-            {/* <Advantage/> */}
             <AboutUs/>
-            {/* <AdvanceTech/> */}
             <Solutions/>
-            <InfiniteCarousel/>
+
 
             
             

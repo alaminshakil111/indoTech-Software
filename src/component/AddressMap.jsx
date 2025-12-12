@@ -7,9 +7,10 @@ import locationBgImg from "../assets/images/locationbgImg.jpg";
 // Address Locations
 const locations = [
   {
-    companyName: "Indo Tech",
-    address:
-      "Concord Farhan Building (2nd Floor) \n House-08, Road-03, Block-J, Baridhara R/A \n Dhaka-1212, Bangladesh",
+    companyName: "Indo Tech KK",
+    address: `7F Kanda Jimbocho2-chome Building, 2-2 Kanda Jimbocho, Chiyoda-ku`,
+    city: "Tokyo",
+    country: "Japan", 
     phone: "03-6672-6855",
     fax: "03-6674-1269",
     hours: "9 am - 6 pm (Mon-Sat)",
@@ -47,6 +48,14 @@ const AddressMap = () => {
                   <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Address</strong>
                   <span>{loc.address}</span>
                 </li>
+                <li className="flex items-start gap-3">
+                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">City</strong>
+                  <span>{loc.city}</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Country</strong>
+                  <span>{loc.country}</span>
+                </li>
 
                 {/* Phone */}
                 <li className="flex items-start gap-3">
@@ -61,10 +70,10 @@ const AddressMap = () => {
                 </li>
 
                 {/* Hours */}
-                <li className="flex items-start gap-3">
+                {/* <li className="flex items-start gap-3">
                   <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Opening</strong>
                   <span>{loc.hours}</span>
-                </li>
+                </li> */}
 
                 {/* Email */}
                 <li className="flex items-start gap-3">

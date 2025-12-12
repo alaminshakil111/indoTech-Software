@@ -99,8 +99,8 @@ const Solutions = () => {
   };
 
   return (
-    <div className="solutionsSection relative bg-no-repeat "  >
-      <div className="containerCustom px-4 py-10 lg:py-[75px]">
+    <div className="solutionsSection relative bg-no-repeat pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[50px] lg:pr-[500px] "  >
+      <div className="containerCustom px-4 py-10 lg:py-[75px] bg-white rounded-[10px] ">
           <div className="max-w-[1000px] m-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 
               style={{
