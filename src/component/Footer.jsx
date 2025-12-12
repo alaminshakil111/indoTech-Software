@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 // import from local
 
-import logo from "../assets/images/attrabit_logo.png";
+import logo from "../assets/images/indotech_logo.png";
 import SocialLink from "./SocialLink";
 
 const footerData = [

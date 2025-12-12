@@ -130,7 +130,7 @@ const computeResults = (q) => {
 
 
   return (
-    <nav className="fixed pl-4 pr-4 lg:pl-8  top-0 left-0 w-full bg-[#2b4b4c]/20 dark:bg-gray-900/20 backdrop-blur-md shadow-md z-50">
+    <nav className="fixed pl-4 pr-4 lg:pl-8  top-0 left-0 w-full bg-[#2b4b4c]/45 dark:bg-gray-900/20 shadow-md z-50">
 
       <div className="w-full pl-4 pr-4 lg:pl-8   flex items-center justify-between gap-4 py-4 lg:py-2">
         <Link to="/" className="flex items-center">
