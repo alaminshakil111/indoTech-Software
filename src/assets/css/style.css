@@ -8,7 +8,7 @@
   --nav-hover-color: #338EC4;
   --nav-active-color: #338EC4; 
   --services-background-color: #DAE7F6;
-  --solutions-backgrond-color: #4992C1;
+  --solutions-backgrond-color: #015099;
 
   
 }
@@ -124,7 +124,7 @@ body p{
 .btnGradient {
   color: white;
   background: #4992C1;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 130px 40px 130px 40px;
   font-weight: 600;
   cursor: pointer;

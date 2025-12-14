@@ -13,6 +13,7 @@ import Software from '@/component/Software';
 import InfiniteCarousel from '@/component/InfiniteCarousel';
 import AboutUs from '@/component/AboutUs';
 import Advantage from '@/component/Advantage';
+import InfoRecruit from '@/component/InfoRecruit';
 
 const Home = () => {
     
@@ -23,9 +24,8 @@ const Home = () => {
             <Services/>
             <AboutUs/>
             <Solutions/>
+            <InfoRecruit/>
 
-
-            
             
         </>
     );

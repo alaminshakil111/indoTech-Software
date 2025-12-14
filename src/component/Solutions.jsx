@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CiCirclePlus, CiCircleMinus  } from "react-icons/ci";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+
 
 const accordionData = [
   {
@@ -99,8 +101,8 @@ const Solutions = () => {
   };
 
   return (
-    <div className="solutionsSection relative bg-no-repeat pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[50px] lg:pr-[500px] "  >
-      <div className="containerCustom px-4 py-10 lg:py-[75px] bg-white rounded-[10px] ">
+    <div className="solutionsSection relative bg-no-repeat flex items-end pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[55px] "  >
+      <div className="containerCustom px-4 py-10 lg:py-[75px] bg-white rounded-[10px] lg:px-20 ">
           <div className="max-w-[1000px] m-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 
               style={{
@@ -161,6 +163,11 @@ const Solutions = () => {
           ))}
           </div>
       </div>
+      
+      <NavLink to="/about-us" className="w-fit btnGradient flex items-center gap-2 lg:mx-[110px]
+      lg:px-[90px]! lg:py-[85px] whitespace-nowrap ">
+        Our Partner <HiOutlineArrowLongRight/>
+      </NavLink>
     </div>
 
   );
