@@ -134,13 +134,20 @@ const computeResults = (q) => {
 
       <div className="w-full pl-4 pr-4 lg:pl-8   flex items-center justify-between gap-4 py-4 lg:py-2">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="Attrabit Logo" className="h-10" />
+          <img src={logo} alt="Attrabit Logo" 
+          onClick={(e) => {
+            if (pathname === "/") {
+              e.preventDefault();
+              window.location.reload();
+            }
+          }}
+          className="h-10" />
         </Link>
 
         <div className="flex flex-row gap-6 items-center">
           <ul className="hidden lg:flex lg:items-center gap-4 font-medium lg:text-[16px]">
             <li><NavLink to="/" className={linkClass}> Home </NavLink></li>
-            <li><NavLink to="services/service-SoftwareDevelopment" className={linkClass}> Software Development </NavLink></li>
+            <li><NavLink to="services/service-SoftwareDevelopment" className={linkClass}> Company Profile </NavLink></li>
             {menuData.map((menu) => (
               <DesktopDropdown key={menu.title} menu={menu} linkClass={linkClass} />
             ))}

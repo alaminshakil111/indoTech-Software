@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { policyData } from "@/Data/PrivacyPolicyData";
+import { useLocation } from "react-router-dom";
+
 
 const PrivacyPolicy = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const location = useLocation();
+  const initialIndex =
+    typeof location.state?.tabIndex === "number"
+      ? location.state.tabIndex
+      : 0;
+
+  const [activeIndex, setActiveIndex] = useState(initialIndex);
   const active = policyData[activeIndex];
 
   return (

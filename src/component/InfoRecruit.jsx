@@ -12,7 +12,7 @@ const InfoRecruit = () => {
 
     return (
         <section className="bg-[#E6F2FB] py-12"> {/* page light blue */}
-            <div className=" containerCustom mx-auto px-4">
+            <div className=" containerCustom mx-auto px-4 py-10 lg:py-[75px]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {/* Left Card */}
                 <div className="relative overflow-hidden rounded-xl shadow-md ">
@@ -42,7 +42,7 @@ const InfoRecruit = () => {
 
                     {/* pill buttons bottom-left */}
                     <div className="absolute left-4 bottom-5 flex flex-wrap gap-3">
-                    <NavLink to="/about-us" className="w-fit btnGradient  flex  items-center gap-2  ">
+                    <NavLink to="/recruitment" className="w-fit btnGradient  flex  items-center gap-2  ">
                             Recruitment <HiOutlineArrowLongRight/>
                         </NavLink>
                     </div>

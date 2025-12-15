@@ -48,8 +48,8 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="w-full py-16 bg-gray-50">
-      <div className="containerCustom mx-auto px-5 relative ">
+    <section className="w-full bg-gray-50">
+      <div className="containerCustom mx-auto px-4 py-10 lg:py-[75px] relative ">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase " 
         style={{
             textShadow: `

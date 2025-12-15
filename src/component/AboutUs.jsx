@@ -24,7 +24,7 @@ const AboutUs = () => {
 
 
   return (
-    <section className="w-full py-16 flex flex-col items-end ">
+    <section className="w-full px-4 lg:px-0 py-10 lg:py-[75px] flex flex-col items-end ">
       <div className="relative w-[95%] md:w-[80%] h-[150px] md:h-[280px] lg:h-[320px] overflow-hidden rounded-tl-[10px] rounded-bl-[10px] shadow-lg">
         <img
           src={concept}

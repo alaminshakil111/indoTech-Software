@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 import emailjs from "@emailjs/browser";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
 
 // import from local
 import TermsContent from "../Data/TermsContent";
 
+
+
 // Validation Schema
-const schema = yup.object().shape({
+const schema = yup.object().shape({ 
   fullName: yup.string().required("Full Name is required"),
   company: yup.string().required("Company Name is required"),
   email: yup.string().email("Enter a valid email").required("Email is required"),
@@ -27,13 +33,22 @@ const nextData = {
   stepsTitle: "What happens next?",
   steps: [
     "Once we’ve received and processed your request, we’ll get back to you to detail your project needs and sign an NDA to ensure confidentiality.",
-    "After examining your wants, needs, and expectations, our team will devise a project proposal with the scope of work, team size, time, and cost estimates.",
+    "After examining your wants, needs and expectations, our team will devise a project proposal with the scope of work, team size, time and cost estimates.",
     "We’ll arrange a meeting with you to discuss the offer and nail down the details.",
     "Finally, we’ll sign a contract and start working on your project right away.",
   ],
 };
 
 const ContactForm = () => {
+
+  const [loading, setLoading] = useState(false);
+
+  const [successModal, setSuccessModal] = useState({
+  open: false,
+  message: "",
+});
+
+
   
   const {
     handleSubmit,
@@ -55,37 +70,87 @@ const ContactForm = () => {
     setAgreeError(false);
   };
 
-  const onSubmit = async (data) => {
-    if (!agree) {
-      setAgreeError(true);
-      return;
-    }
+  // const onSubmit = async (data) => {
+  //   if (!agree) {
+  //     setAgreeError(true);
+  //     return;
+  //   }
 
-    emailjs
-      .send(
-        "service_cuopvy9",
-        "template_2fdjh6m",
-        {
-          fullName: data.fullName,
-          company: data.company,
-          email: data.email,
-          phone: data.phone,
-          message: data.message,
-        },
-        "Ls9FVDkMUmTS7lfex"
-      )
-      .then(
-        (response) => {
-          alert("Your message has been sent successfully!");
-          reset();
-          setAgree(false);
-        },
-        (error) => {
-          console.log("FAILED...", error);
-          alert("Something went wrong. Please try again.");
-        }
-      );
-  };
+  //   emailjs
+  //     .send(
+  //       "service_cuopvy9",
+  //       "template_2fdjh6m",
+  //       {
+  //         fullName: data.fullName,
+  //         company: data.company,
+  //         email: data.email,
+  //         phone: data.phone,
+  //         message: data.message,
+  //       },
+  //       "Ls9FVDkMUmTS7lfex"
+  //     )
+  //     .then(
+  //       (response) => {
+  //         alert("Your message has been sent successfully!");
+  //         reset();
+  //         setAgree(false);
+  //       },
+  //       (error) => {
+  //         console.log("FAILED...", error);
+  //         alert("Something went wrong. Please try again.");
+  //       }
+  //     );
+  // };
+
+const onSubmit = async (data) => {
+  if (!agree) {
+    setAgreeError(true);
+    return;
+  }
+
+  setLoading(true); // Start loading
+
+  try {
+    const response = await fetch("https://api.attrabit.net/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: data.fullName,
+        company: data.company,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+      }),
+    });
+
+    const resData = await response.json();
+
+    if (response.ok) {
+      setSuccessModal({
+        open: true,
+        message: "Thank you. Our team will get back to you shortly.",
+      });
+      reset();
+      setAgree(false);
+    } else {
+      setSuccessModal({
+        open: true,
+        message: "Something went wrong! Please send an email to 'info@attrabit.net'",
+      });
+    }
+  } catch (err) {
+    console.error(err);
+    setSuccessModal({
+      open: true,
+      message: "Something went wrong! Please send an email to 'info@attrabit.net'",
+    });
+  } finally {
+    setLoading(false); // Stop loading
+  }
+};
+
 
 const formFields = [
   { name: "fullName", label: "Full Name", type: "text", textColor: "#000000" },
@@ -97,6 +162,7 @@ const formFields = [
 
 
   return (
+
     <div className="dark:bg-[#192030]">
       <div className="containerCustom px-4 py-10 lg:py-[75px]">
         <div className="grid md:grid-cols-2 md:gap-[50px] lg:gap-[90px]">
@@ -106,13 +172,13 @@ const formFields = [
               Contact Us
             </h2>
             <p className="textColor text-[15px]">
-              <a
+              {/* <a
                 href="tel:+880123456789"
                 className="border-b border-[#FF5650] text-[#FF5650] hover:text-[#e14b47] transition-colors pr-1"
               >
                 Book a call
-              </a>{" "}
-              or fill out the form below and we’ll get back to you once we’ve processed your request.
+              </a>{" "} */}
+              Fill out the form below and we’ll get back to you once we’ve processed your request.
             </p>
 
             <Box
@@ -161,33 +227,41 @@ const formFields = [
 
               {/* Terms and Conditions */}
               <div className="lg:col-span-2 mt-3">
-                <label className="flex items-start gap-2 cursor-pointer textColor">
-                  <input
-                    type="checkbox"
-                    checked={agree}
-                    onChange={() => setOpenModal(true)}
-                  />
-                  <span>
-                    I agree to the{" "}
-                    <span
-                      className="text-[#FF5650] underline cursor-pointer"
-                      onClick={() => setOpenModal(true)}
-                    >
-                      Terms & Conditions
-                    </span>
-                  </span>
-                </label>
+              <label className="flex items-center gap-2 cursor-pointer textColor">
+                <input
+                  type="checkbox"
+                  checked={agree}
+                  onChange={() => {
+                    if (!agree) {
+                      setOpenModal(true);
+                    } else {
+                      setAgree(false);
+                    }
+                  }}
+                />
 
-                {agreeError && (
-                  <p className="text-red-500 text-sm mt-1">
-                    You must agree to the Terms & Conditions before submitting.
-                  </p>
-                )}
-              </div>
+                <span>
+                  I agree to the{" "}
+                  <span
+                    className="text-[#FF5650] underline cursor-pointer"
+                    onClick={() => setOpenModal(true)}
+                  >
+                    Terms & Conditions
+                  </span>
+                </span>
+              </label>
+
+              {agreeError && (
+                <p className="text-red-500 text-sm mt-1">
+                  You must agree to the Terms & Conditions before submitting.
+                </p>
+              )}
+            </div>
+
 
               <button
                 type="submit"
-                className={`btnBorder ${!agree ? "border-red-500" : ""}`}>
+                className={`btnGradient ${!agree ? "border-red-500" : ""}`}>
                 Submit
               </button>
 
@@ -265,6 +339,47 @@ const formFields = [
 
 
       </div>
+
+      <Modal
+        open={successModal.open}
+        onClose={() => setSuccessModal({ open: false, message: "" })} >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: "90%",
+            maxWidth: 420,
+            bgcolor: "background.paper",
+            borderRadius: "12px",
+            boxShadow: 24,
+            p: 4,
+            textAlign: "center",
+          }}
+        >
+          <h2 className="text-xl font-bold mb-3 text-green-600"></h2>
+
+          <p className="textColor mb-6">{successModal.message}</p>
+
+          <Button
+            variant="contained"
+            onClick={() => setSuccessModal({ open: false, message: "" })}
+            fullWidth
+          >
+            OK
+          </Button>
+        </Box>
+      </Modal>
+
+      {loading && (
+        <div className="fixed inset-0 bg-black/10 bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="loader border-4 border-t-4 border-t-white border-gray-200 rounded-full w-16 h-16 animate-spin"></div>
+        </div>
+      )}
+
+
+
     </div>
   );
 };
