@@ -25,7 +25,7 @@ const InfoRecruit = () => {
 
                     {/* dark gradient bottom */}
                     <div className="absolute inset-x-0 bottom-0 h-[100%] bg-gradient-to-t from-[rgba(0,0,0,0.85)] to-[rgba(8,78,147,0.35)] flex items-end justify-end">
-                        <NavLink to="/about-us" className="w-fit btnBorder bg-[#4992C1]/60! flex px-6! py-4! items-center gap-2  ">
+                        <NavLink to="/companyProfile" className="w-fit btnBorder bg-[#4992C1]/60! flex px-6! py-4! items-center gap-2  ">
                             Company Information Is Here <HiOutlineArrowLongRight/>
                         </NavLink>
                     </div>

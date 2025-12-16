@@ -173,7 +173,8 @@ const Solutions = () => {
   };
 
   return (
-    <div className="solutionsSection relative bg-no-repeat flex items-end pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[55px] "  >
+    <div className="solutionsSection relative bg-no-repeat flex flex-col gap-4 sm:flex-row sm:gap-4 items-end 
+    pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[55px] "  >
       <div className="containerCustom px-4 py-10 lg:py-[75px] bg-white rounded-[10px] lg:px-20 ">
           <div className="max-w-[1000px] m-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 
@@ -192,53 +193,54 @@ const Solutions = () => {
 
           {/* Wrapper grid for left-right layout */}
           <div className="textColor grid grid-cols-1 gap-8">
-          {accordionData.map((item, index) => (
-              <div key={index} className={` border-b border-gray-300 py-4 cursor-pointer select-none `}>
-              <div
-                  className="flex items-start justify-between"
-                  onClick={() => handleToggle(index)} >
-                  <div>
-                      <h5 className="text-[18px] lg:text-[20px] font-semibold">
-                          {item.title}
-                      </h5>
-                      <p className="textColor text-[15px] mt-1">{item.subtitle}</p>
-                  </div>
+            {accordionData.map((item, index) => (
+                <div key={index} className={` border-b border-gray-300 py-4 cursor-pointer select-none `}>
+                <div
+                    className="flex items-start justify-between"
+                    onClick={() => handleToggle(index)} >
+                    <div>
+                        <h5 className="text-[18px] lg:text-[20px] font-semibold">
+                            {item.title}
+                        </h5>
+                        <p className="textColor text-[15px] mt-1">{item.subtitle}</p>
+                    </div>
 
-                  <span className="text-2xl font-bold">
-                      {openIndex === index ? <CiCircleMinus className="text-[#FF5650]" /> : <CiCirclePlus className="text-[#336DBC]" />}
-                  </span>
-              </div>
+                    <span className="text-2xl font-bold">
+                        {openIndex === index ? <CiCircleMinus className="text-[#FF5650]" /> : <CiCirclePlus className="text-[#336DBC]" />}
+                    </span>
+                </div>
 
-              {openIndex === index && (
-                  <div className="mt-4 space-y-2 pl-2">
-                    {openIndex === index && (
-                      <div className="grid grid-cols-2 gap-2 pl-3 md:pl-4 lg:pl-[25px] ">
-                          {item.links.map((link, i) => (
-                            
-                              <li>
-                                <NavLink
-                                  key={i}
-                                  to={link.to}
-                                  state={{ tabIndex: link.tabIndex }}
-                                  className="block text-[#0072B5] hover:underline text-sm" >
-                                  {link.label}
-                                </NavLink>
-                              </li>
-                            
-                          ))}
-                        </div>
-                    )}
+                {openIndex === index && (
+                    <div className="mt-4 space-y-2 pl-2">
+                      {openIndex === index && (
+                        <div className="grid grid-cols-2 gap-2 pl-3 md:pl-4 lg:pl-[25px] ">
+                            {item.links.map((link, i) => (
+                              
+                                <li>
+                                  <NavLink
+                                    key={i}
+                                    to={link.to}
+                                    state={{ tabIndex: link.tabIndex }}
+                                    className="block text-[#0072B5] hover:underline text-sm" >
+                                    {link.label}
+                                  </NavLink>
+                                </li>
+                              
+                            ))}
+                          </div>
+                      )}
 
-                  </div>
-                  
-              )}
-              </div>
-          ))}
+                    </div>
+                    
+                )}
+                </div>
+            ))}
           </div>
       </div>
       
-      <NavLink to="/about-us" className="w-fit btnGradient flex items-center gap-2 lg:mx-[110px]
-      lg:px-[90px]! lg:py-[85px] whitespace-nowrap ">
+      <NavLink to="/about-us" className="w-fit btnGradient flex items-center gap-2 lg:mx-[50px]
+      lg:px-[70px]! lg:py-[70px] xl:mx-[110px]
+      xl:px-[90px]! xl:py-[85px] whitespace-nowrap ">
         Our Partner <HiOutlineArrowLongRight/>
       </NavLink>
     </div>

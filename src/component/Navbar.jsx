@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaSearch, FaSun, FaMoon, FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, Link, useLocation, useNavigate } from "react-router-dom";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
+
 import { servicesData } from "../Data/ServicesData";
 import { solutionsData } from "../Data/SolutionsData";
 
@@ -147,7 +149,7 @@ const computeResults = (q) => {
         <div className="flex flex-row gap-6 items-center">
           <ul className="hidden lg:flex lg:items-center gap-4 font-medium lg:text-[16px]">
             <li><NavLink to="/" className={linkClass}> Home </NavLink></li>
-            <li><NavLink to="services/service-SoftwareDevelopment" className={linkClass}> Company Profile </NavLink></li>
+            <li><NavLink to="/companyProfile" className={linkClass}> Company Profile </NavLink></li>
             {menuData.map((menu) => (
               <DesktopDropdown key={menu.title} menu={menu} linkClass={linkClass} />
             ))}
@@ -276,8 +278,8 @@ const computeResults = (q) => {
             className={({ isActive }) => (isActive || pathname === "/" ? "nav-link active-link" : "nav-link text-white ")}> Home </NavLink>
           </li>
           <li>
-            <NavLink to="services/service-SoftwareDevelopment" onClick={() => setMobileOpen(false)} 
-            className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Software Development </NavLink>
+            <NavLink to="/companyProfile" onClick={() => setMobileOpen(false)} 
+            className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Company Profile </NavLink>
           </li>
           {menuData.map((menu) => (
             <MobileDropdown
@@ -295,7 +297,10 @@ const computeResults = (q) => {
           <li>
             <NavLink to="/recruitment" onClick={() => setMobileOpen(false)} className={({ isActive }) => (isActive || pathname === "/recruitment" ? "nav-link active-link" : "nav-link")}>Recruitment</NavLink>
           </li>
-          <NavLink to="/contact" onClick={() => setMobileOpen(false)} className="btnBorder w-fit">Contact</NavLink>
+          <NavLink to="/contact" onClick={() => setMobileOpen(false)} className="w-fit btnGradient flex items-center gap-2 lg:mx-[110px]
+                lg:px-[90px]! lg:py-[85px] whitespace-nowrap ">
+                  Contact <HiOutlineArrowLongRight/>
+                </NavLink>
         </ul>
       </div>
     </nav>

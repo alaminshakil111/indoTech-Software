@@ -20,6 +20,7 @@ import AboutUs from './pages/AboutUs';
 import Recruitment from './pages/Recruitment';
 import RecruitmentDetails from './pages/RecruitmentDetails';
 import ScrollToTop from './component/ScrollToTop';
+import CompanyProfile from './pages/CompanyProfile';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Routes>
           <Route path='/' element = {<Home/>} />
           {/* <Route path='/software-development' element={<SoftwareDev/>} /> */}
+          <Route path='/companyProfile' element= { <CompanyProfile/> } />
           <Route path='/services-all' element = {<ServicesAll/>} />
           <Route path="/services/:id" element={<ServicesDetails/>} />
           <Route path='/company-info' element = {<CompanyInfo/>} />
