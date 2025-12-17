@@ -46,7 +46,7 @@ export default function App() {
           <Route path='/contact' element = { <ContactForm/> } />
           <Route path='/privacypolicy' element = { <PrivacyPolicy/> } />
         </Routes>
-        <AddressMap/>
+        {/* <AddressMap/> */}
         {/* <SocialLink/> */}
         <Footer/>
       </BrowserRouter>

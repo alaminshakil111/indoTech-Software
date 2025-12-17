@@ -14,6 +14,7 @@ import MuiAlert from "@mui/material/Alert";
 
 // import from local
 import TermsContent from "../Data/TermsContent";
+import AddressMap from "@/component/AddressMap";
 
 
 
@@ -258,7 +259,6 @@ const formFields = [
               )}
             </div>
 
-
               <button
                 type="submit"
                 className={`btnGradient ${!agree ? "border-red-500" : ""}`}>
@@ -378,7 +378,7 @@ const formFields = [
         </div>
       )}
 
-
+      <AddressMap/>
 
     </div>
   );

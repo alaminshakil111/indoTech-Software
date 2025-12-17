@@ -17,7 +17,7 @@ const locations = [
     email: "kojinjouhou@indotech.jp",
     bgImage: locationBgImg,
     mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.54066700231!2d90.42148897592858!3d23.799365786893713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70e6aed1077%3A0xdfff52439677f321!2sAttraBit%20ICT%20Solution%20Ltd.!5e0!3m2!1sen!2sbd!4v1762102936045!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3843.572356138776!2d139.75443697623166!3d35.695578029185015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s7F%20Kanda%20Jimbocho2-chome%20Building%2C%202-2%20Kanda%20Jimbocho%2C%20Chiyoda-ku%2C%20Japan!5e1!3m2!1sen!2sbd!4v1765970676896!5m2!1sen!2sbd",
   },
 ];
 
@@ -27,13 +27,9 @@ const AddressMap = () => {
       {locations.map((loc, index) => (
         <section
           key={index}
-          className="w-full mx-auto grid md:grid-cols-2 gap-0 min-h-[500px]"
-        >
+          className="w-full mx-auto grid md:grid-cols-2 gap-0 min-h-[500px]" >
           {/* Left Side - Contact Info */}
-          <div
-            className="relative flex flex-col justify-center items-center px-10 py-12 text-black bg-cover bg-center"
-            
-          >
+          <div className="relative flex flex-col justify-center items-center px-10 py-12 bg-[#c3d2ff] text-black bg-cover bg-center" >
             <div className="absolute inset-0 "></div>
 
             <div className="relative z-10 space-y-4 whitespace-pre-line">
@@ -41,31 +37,31 @@ const AddressMap = () => {
                 {loc.companyName}
               </h2>
 
-              <ul className="space-y-4 text-gray-700 dark:text-gray-300">
+              <ul className="space-y-4 text-gray-700 ">
   
                 {/* Address */}
                 <li className="flex items-start gap-3">
-                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Address</strong>
+                  <strong className="min-w-[90px] font-semibold text-gray-900 ">Address</strong>
                   <span>{loc.address}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">City</strong>
+                  <strong className="min-w-[90px] font-semibold text-gray-900 ">City</strong>
                   <span>{loc.city}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Country</strong>
+                  <strong className="min-w-[90px] font-semibold text-gray-900 ">Country</strong>
                   <span>{loc.country}</span>
                 </li>
 
                 {/* Phone */}
                 <li className="flex items-start gap-3">
-                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Phone</strong>
+                  <strong className="min-w-[90px] font-semibold text-gray-900 ">Phone</strong>
                   <span>{loc.phone}</span>
                 </li>
 
                 {/* Fax */}
                 <li className="flex items-start gap-3">
-                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Fax</strong>
+                  <strong className="min-w-[90px] font-semibold text-gray-900 ">Fax</strong>
                   <span>{loc.fax}</span>
                 </li>
 
@@ -77,16 +73,16 @@ const AddressMap = () => {
 
                 {/* Email */}
                 <li className="flex items-start gap-3">
-                  <strong className="min-w-[90px] font-semibold text-gray-900 dark:text-white">Email</strong>
+                  <strong className="min-w-[90px] font-semibold text-gray-900 ">Email</strong>
                   <span>{loc.email}</span>
                 </li>
 
               </ul>
 
 
-              <NavLink to="/contact" className="mt-[15px] inline-block py-2! btnGradient">
+              {/* <NavLink to="/contact" className="mt-[15px] inline-block py-2! btnGradient">
                 Contact Us
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
 

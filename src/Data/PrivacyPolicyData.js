@@ -2,7 +2,10 @@
 export const policyData = [
   {
   subject: "Privacy Policy",
-  intro: `AttraBit ICT Solution takes this importance seriously and strives to properly protect personal information by establishing a policy in accordance with the Privacy Mark Program. As a contracted labor dispatch business (system integrator) providing services involving consulting to design, development, operation, and maintenance, we recognize the importance of protecting personal information. We have established a personal information protection policy, and all employees work together to properly protect information, including specific personal information (hereinafter referred to as “personal information”).`,
+  intro: `INDO TECH Co., Ltd. takes this importance seriously and strives to properly protect personal information by establishing a policy in accordance with the Privacy Mark Program.
+  As a contracted labor dispatch business (system integrator) providing services ranging from problem-solving consulting to design, development, operation, and maintenance, we recognize the importance of protecting personal information. We have established a personal information protection policy, and
+  all employees work together to properly protect information, including specific personal information (hereinafter referred to as "personal information").`,
+  intro1: `Regarding the collection, use, provision and management of personal information, we will implement the following regulations and education, training, audits, etc. as a means to ensure effectiveness.`,
   sections: [
     {
       title: "1. We will formulate personal information protection objectives and plans to achieve these objectives, and strive to protect personal information.",
@@ -37,21 +40,30 @@ export const policyData = [
     },
   ],
   footer: {
-    established: "Established: January 1, 2021",
-    revised: "Revised: November 1, 2025",
-    director: "Representative Director Soumendra Barua",
+    established: "Established: August 1, 2018",
+    revised: "Revised: October 1, 2023",
+    name: "INDO TECH Co. Ltd.",
+    director: "Representative Director: Toshiko Senda",
 
+    contactIndo: {
+      intro: "For inquiries regarding the Personal Information Protection Policy, please contact: INDO TECH Co., Ltd.",
+      address: "7F Kanda Jinbocho 2-chome Building, 2-2 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-0051 Personal",
+      manager: `Information Protection Manager: SI Department Manager 
+      Email: kojinjouhou@indotech.jp`,
+      telephone: "Telephone: 03-6672-6855 Fax: 03-6674-1269",
+    },
+    
     contact: {
-      name: "AttraBit ICT Solution",
-      address: "Concord Farhan Building (2nd Floor) House-08 ,Road-3, Block-J, Baridhara R/A Dhaka-1212, Bangladesh",
-      manager: "Personal Information Director Email: baura.soumendra@attrabit.net",
-      phone: "Phone: +880 1671060576",
+      // name: "AttraBit ICT Solution",
+      certified1: "[Name of certified personal information protection organization and contact point for complaint resolution.]",
+      certified2: "Name of certified personal information protection organization: Japan Digital Economy and Community Promotion Association (General Incorporated Foundation)",
+      certified3: "Contact point for complaint resolution: Certified Personal Information Protection Organization Secretariat",
+      address: "Address: Roppongi First Building, 9-9 Roppongi 1-chome, Minato-ku, Tokyo 106-0032",
+      telephone: "Telephone: 03-5860-7565 0120-700-779",
     },
     certified: {
-      name: "Cerficate of Membership, Bangladesh Association of Software and Information Services (BASIS)",
-      address: "Level 5, BDBL Bhaban, West), 12, Dhaka 1215",
-      phone: "Phone:  09612-322747 ",
-      email: "email: info@basis.org.bd "
+      name: "Our company is a target business of the certified personal information protection organization.",
+
     },
   },
 },
@@ -59,11 +71,12 @@ export const policyData = [
 {
   subject: "Handling of Personal Information",
   intro: `We will handle personal information received in response to inquiries in accordance with the following regulations.`,
+
   sections: [
     {
       title: "1. Purpose of use",
+      text: "We will use personal information received through inquiries for the purposes set out below.",
       bullets: [
-        "We will use personal information received through inquiries for the purposes set out below.",
         "We will use specifications and other documents received from customers to carry out our contract work (system integrator), from problem-solving consulting to design, development, operation and maintenance.",
         "Labor dispatch business, paid employment placement business, and career sheets obtained from our own company and back office engineers will be used to register staff.",
         "CVs and employment conditions notices obtained from dispatched staff (including applicants) will be used to manage dispatched staff.",
@@ -87,8 +100,9 @@ export const policyData = [
 
     {
       title: "3. Provision of personal information to third parties",
-      bullets: [
-        "We will not provide personal information to third parties except in the following cases:",
+      text: "We will not provide personal information to third parties except in the following cases:",
+      numbers: [
+        
         "1) When the principal and their agent have given their prior consent.",
         "2) When it is necessary to cooperate with a national government agency or local public body in carrying out duties prescribed by law.",
         "3) When it is necessary to protect the important interests of the principal and their agent, as well as the public, such as their life, health, or property.",
@@ -108,48 +122,31 @@ export const policyData = [
     },
 
     {
-      title:
-        "6. Regarding requests for disclosure of retained personal data or records of provision to third parties, complaints, and consultations",
-      text:
-        "You may request notification of the purpose of use of your retained personal data handled by our company, disclosure, correction, addition or deletion of content, suspension of use, erasure, suspension of provision to third parties, or disclosure of records of provision to third parties. Please contact us at the address below for complaints regarding the handling of personal information, or for requests for notification of the purpose of use of your retained personal data, disclosure, correction, addition or deletion of content, suspension of use, erasure, suspension of provision to third parties, or disclosure of records of provision to third parties.\n\n[Personal Information Protection Manager: SI Department Manager TEL: 03-6672-6855 E-mail: kojinjouhou@indotech.jp]",
+      title:"6. Regarding requests for disclosure of retained personal data or records of provision to third parties, complaints, and consultations",
+      text:"You may request notification of the purpose of use of your retained personal data handled by our company, disclosure, correction, addition or deletion of content, suspension of use, erasure, suspension of provision to third parties, or disclosure of records of provision to third parties. Please contact us at the address below for complaints regarding the handling of personal information, or for requests for notification of the purpose of use of your retained personal data, disclosure, correction, addition or deletion of content, suspension of use, erasure, suspension of provision to third parties, or disclosure of records of provision to third parties.",
+      text1: "[Personal Information Protection Manager: SI Department Manager TEL: 03-6672-6855 E-mail: kojinjouhou@indotech.jp]",
+        
     },
 
     {
       title:
         "7. Procedures for complaints and requests for notification, disclosure, correction, addition or deletion, and refusal to use or provide personal information",
-      bullets: [
+      numbers: [
         "① We will verify your identity based on personal information held by our company.",
         "② As a general rule, we do not accept inquiries from agents.",
         "③ Inquiries can be made by phone or email at the above contact information.",
         "End",
       ],
     },
-  ],
-
-  footer: {
-    established: "Established: January 1, 2021",
-    revised: "Revised: November 1, 2025",
-    director: "Representative Director Soumendra Barua",
-
-    contact: {
-      name: "AttraBit ICT Solution",
-      address: "Concord Farhan Building (2nd Floor) House-08 ,Road-3, Block-J, Baridhara R/A Dhaka-1212, Bangladesh",
-      manager: "Personal Information Director Email: baura.soumendra@attrabit.net",
-      phone: "Phone: +880 1671060576",
-    },
-    certified: {
-      name: "Cerficate of Membership, Bangladesh Association of Software and Information Services (BASIS)",
-      address: "Level 5, BDBL Bhaban, West), 12, Dhaka 1215",
-      phone: "Phone:  09612-322747 ",
-      email: "email: info@basis.org.bd "
-    },
-  },
+  ],  
 },
-
 
 {
   subject: "Procedures for requesting disclosure of personal information, etc.",
-  intro: `Regarding personal data held by our company, if an individual requests notification of the purpose of use, disclosure, correction, addition or deletion of content, suspension of use, erasure, suspension of provision to a third party, or disclosure of records of provision to a third party (hereinafter referred to as "requests for disclosure, etc."), we will respond without delay. We will respond without delay to any requests for disclosure, etc. from the individual regarding personal data held by our company. If you wish to make a request for disclosure, etc., please follow the steps below. If you would like to be notified of the purpose of use, please refer to [1. Purpose of Use of Personal Information - Handling of Personal Information].`,
+  intro: `Regarding personal data held by our company, if an individual requests notification of the purpose of use, disclosure, correction, addition or deletion of content, suspension of use, erasure, suspension of provision to a third party, or disclosure of records of provision to a third party (hereinafter referred to as "requests for disclosure, etc."), we will respond without delay.
+  We will respond without delay to any requests for disclosure, etc. from the individual regarding personal data held by our company. 
+  If you wish to make a request for disclosure, etc., please follow the steps below to make your request.
+  If you would like to be notified of the purpose of use, please refer to [1. Purpose of Use of Personal Information - Handling of Personal Information].`,
 
   sections: [
     {
@@ -159,12 +156,13 @@ export const policyData = [
 
     {
       title: "2. Contact for requests for disclosure, etc.",
-      text: `To make a request for disclosure, etc., please send the required documents by registered mail to the address below.\n\nAddress: Indotech Co., Ltd. Complaints and Consultation Desk, Kanda Jinbocho 2-chome Building 7F, 2-2 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-0051`,
+      text: `To make a request for disclosure, etc., please send the required documents by registered mail to the address below.
+      Address: Indotech Co., Ltd. Complaints and Consultation Desk, Kanda Jinbocho 2-chome Building 7F, 2-2 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-0051`,
     },
 
     {
       title: "3. Documents to be submitted when making a request for disclosure, etc.",
-      bullets: [
+      numbers: [
         "1) Our designated application form: “Application for Disclosure, etc. of Personal Information” (Click here to download the PDF file.)",
         "2) Documents for identity verification: A copy of an officially issued identity verification document such as a driver's license, passport, health insurance card, or pension book.",
       ],
@@ -172,16 +170,15 @@ export const policyData = [
 
     {
       title: "4. Fees and Collection Method",
-      bullets: [
-        "A fee of 500 yen will be charged for each request for notification of the purpose of use of personal information or disclosure of records of provision to a third party.",
-        "Please enclose 500 yen worth of postage stamps with the above documents.",
-      ],
+      text: `A fee of 500 yen will be charged for each request for notification of the purpose of use of personal information or disclosure of records of provision to a third party.",
+      Please enclose 500 yen worth of postage stamps with the above documents.`,
+
     },
 
     {
       title: "5. Cases in which a request for disclosure, etc., cannot be accepted",
       text: "A request for disclosure, etc., cannot be accepted in the following cases. We will contact you to explain the reason, but fees already paid will not be refunded:",
-      bullets: [
+      numbers: [
         "1) If we are unable to verify your identity.",
         "2) If the type of personal information requested is not subject to disclosure, etc.",
         "3) If the required documents are incomplete.",
@@ -195,7 +192,7 @@ export const policyData = [
 
     {
       title: "6. Safety Management Measures for Handling Personal Information",
-      bullets: [
+      numbers: [
         "(1) Establish and operate a personal information protection management system that complies with JIS Q 15001.",
         "(2) Provide training on handling personal information based on the personal information protection management system.",
         "(3) Conduct regular self-inspections and internal audits of the status of personal information handling.",
@@ -207,21 +204,12 @@ export const policyData = [
   ],
 
   footer: {
-    established: "Established: January 1, 2021",
-    revised: "Revised: November 1, 2025",
-    director: "Representative Director Soumendra Barua",
-
-    contact: {
-      name: "AttraBit ICT Solution",
-      address: "Concord Farhan Building (2nd Floor) House-08 ,Road-3, Block-J, Baridhara R/A Dhaka-1212, Bangladesh",
-      manager: "Personal Information Director Email: baura.soumendra@attrabit.net",
-      phone: "Phone: +880 1671060576",
-    },
-    certified: {
-      name: "Cerficate of Membership, Bangladesh Association of Software and Information Services (BASIS)",
-      address: "Level 5, BDBL Bhaban, West), 12, Dhaka 1215",
-      phone: "Phone:  09612-322747 ",
-      email: "email: info@basis.org.bd "
+    contactIndo: {
+      intro: "For inquiries regarding the Personal Information Protection Policy, please contact: INDO TECH Co., Ltd.",
+      address: "7F Kanda Jinbocho 2-chome Building, 2-2 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-0051 Personal",
+      manager: `Information Protection Manager: SI Department Manager 
+      Email: kojinjouhou@indotech.jp`,
+      telephone: "Telephone: 03-6672-6855 Fax: 03-6674-1269",
     },
   },
 },
@@ -255,28 +243,20 @@ If you wish to make a Request for Disclosure, etc., please contact the consultat
     },
     {
       title: "6. Contact Point for Inquiries and Complaints Regarding the Handling of Personal Information",
-      text: `We have established a complaints desk to receive opinions and inquiries regarding our handling of personal information. If you have any inquiries, please contact the Personal Information Protection Manager, who is responsible for personal information handling.`
+      text: `We have set up a complaints desk to receive opinions and inquiries regarding our handling of personal information. If you have any opinions or inquiries, please contact the personal information protection manager, who is responsible for handling personal information.`
     }
   ],
 
   footer: {
-    established: "Established: January 1, 2021",
-    revised: "Revised: November 1, 2025",
-    director: "Representative Director Soumendra Barua",
-
-    contact: {
-      name: "AttraBit ICT Solution",
-      address: "Concord Farhan Building (2nd Floor) House-08 ,Road-3, Block-J, Baridhara R/A Dhaka-1212, Bangladesh",
-      manager: "Personal Information Director Email: baura.soumendra@attrabit.net",
-      phone: "Phone: +880 1671060576",
-    },
-    certified: {
-      name: "Cerficate of Membership, Bangladesh Association of Software and Information Services (BASIS)",
-      address: "Level 5, BDBL Bhaban, West), 12, Dhaka 1215",
-      phone: "Phone:  09612-322747 ",
-      email: "email: info@basis.org.bd "
+    contactIndo: {
+      intro: "For inquiries regarding the Personal Information Protection Policy, please contact: INDO TECH Co., Ltd.",
+      address: "7F Kanda Jinbocho 2-chome Building, 2-2 Kanda Jinbocho, Chiyoda-ku, Tokyo 101-0051 Personal",
+      manager: `Information Protection Manager: SI Department Manager 
+      Email: kojinjouhou@indotech.jp`,
+      telephone: "Telephone: 03-6672-6855 Fax: 03-6674-1269",
     },
   },
+
 },
 
 

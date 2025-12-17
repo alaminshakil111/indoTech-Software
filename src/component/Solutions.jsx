@@ -3,6 +3,9 @@ import { NavLink } from "react-router-dom";
 import { CiCirclePlus, CiCircleMinus  } from "react-icons/ci";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
+// import from local
+import logo from "../assets/images/indotech_logo.png";
+
 
 const accordionData = [
   {
@@ -174,7 +177,17 @@ const Solutions = () => {
 
   return (
     <div className="solutionsSection relative bg-no-repeat flex flex-col gap-4 sm:flex-row sm:gap-4 items-end 
-    pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[55px] "  >
+    pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[55px]
+
+    before:content-[''] 
+    before:absolute 
+    before:top-0 
+    before:right-0 
+    before:w-full 
+    before:h-32 
+    before:bg-[url('../assets/images/indotech_logo.png')] 
+    before:bg-no-repeat 
+    before:bg-cover "  >
       <div className="containerCustom px-4 py-10 lg:py-[75px] bg-white rounded-[10px] lg:px-20 ">
           <div className="max-w-[1000px] m-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 

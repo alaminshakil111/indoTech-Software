@@ -1,10 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 // import from local
-import logo from "../assets/images/attrabit_logo.png";
+import logo from "../assets/images/indotech_logo.png";
 import SocialLink from "./SocialLink";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+
 
 const footerData = [
   {
@@ -59,8 +60,8 @@ const footerData = [
   {
     title: null,
     items: [
-      {label: "Company Information", to: "/services/service-SoftwareDevelopment" },
-      {label: "Recruitment", to: "/services/service-SoftwareDevelopment" },
+      {label: "Company Information", to: "/companyProfile" },
+      {label: "Recruitment", to: "/recruitment" },
     ],
   },
 
@@ -84,7 +85,7 @@ const Footer = () => {
                 loading="lazy"
                 src={logo}
                 alt="Company Logo"
-                className="w-28 mb-4"
+                className="w-[80%] mb-6"
               />
             )}
 
