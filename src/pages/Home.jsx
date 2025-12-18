@@ -14,6 +14,7 @@ import InfiniteCarousel from '@/component/InfiniteCarousel';
 import AboutUs from '@/component/AboutUs';
 import Advantage from '@/component/Advantage';
 import InfoRecruit from '@/component/InfoRecruit';
+import Flyer from '@/component/Flyer';
 
 const Home = () => {
     
@@ -25,6 +26,7 @@ const Home = () => {
             <AboutUs/>
             <Solutions/>
             <InfoRecruit/>
+            {/* <Flyer/> */}
 
             
         </>

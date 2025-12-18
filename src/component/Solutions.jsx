@@ -181,14 +181,14 @@ const Solutions = () => {
 
     before:content-[''] 
     before:absolute 
-    before:top-0 
+    before:bottom-[20%] 
     before:right-0 
-    before:w-full 
-    before:h-32 
-    before:bg-[url('../assets/images/indotech_logo.png')] 
+    before:w-[40%] 
+    before:h-[20%] 
+    before:bg-[url('/images/indotech_logo.png')] 
     before:bg-no-repeat 
     before:bg-cover "  >
-      <div className="containerCustom px-4 py-10 lg:py-[75px] bg-white rounded-[10px] lg:px-20 ">
+      <div className="containerCustom relative z-10 px-4 py-10 lg:py-[75px] bg-white rounded-[10px] lg:px-20 ">
           <div className="max-w-[1000px] m-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 
               style={{
@@ -205,7 +205,7 @@ const Solutions = () => {
           </div>
 
           {/* Wrapper grid for left-right layout */}
-          <div className="textColor grid grid-cols-1 gap-8">
+          <div className="textColor grid grid-cols-1 gap-1">
             {accordionData.map((item, index) => (
                 <div key={index} className={` border-b border-gray-300 py-4 cursor-pointer select-none `}>
                 <div

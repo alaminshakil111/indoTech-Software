@@ -21,6 +21,7 @@ import Recruitment from './pages/Recruitment';
 import RecruitmentDetails from './pages/RecruitmentDetails';
 import ScrollToTop from './component/ScrollToTop';
 import CompanyProfile from './pages/CompanyProfile';
+import Flyer from './component/Flyer';
 
 export default function App() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
         </Routes>
         {/* <AddressMap/> */}
         {/* <SocialLink/> */}
+        <Flyer/>
         <Footer/>
       </BrowserRouter>
       

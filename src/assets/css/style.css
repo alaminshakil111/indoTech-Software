@@ -157,7 +157,6 @@ body p{
 
 }
 
-
 .cardButton {
   color: white; 
   background: linear-gradient(90deg, #336DBC 0%, #FF5650 100%);
@@ -181,6 +180,8 @@ body p{
   align-items: flex-end ;
 }
 
+
+/*  */
 .marquee {
   overflow: hidden;
   white-space: nowrap;

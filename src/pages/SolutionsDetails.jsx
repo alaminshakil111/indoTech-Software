@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { solutionsData } from "../Data/SolutionsData";
 
+import { solutionsData } from "../Data/SolutionsData";
 
 const SolutionsDetails = () => {
   const { id } = useParams();
@@ -11,8 +11,7 @@ const SolutionsDetails = () => {
   if (!solution)
     return <h2 className="text-center py-20 text-xl"> Solutions Not Found </h2>;
 
-  const isObjectDetails =
-    typeof solution.details === "object" && !Array.isArray(solution.details);
+  const isObjectDetails = typeof solution.details === "object" && !Array.isArray(solution.details);
   
   const dynamicTabs = isObjectDetails ? Object.keys(solution.details) : [];
 
