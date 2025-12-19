@@ -7,7 +7,11 @@ const CompanyProfile = () => {
   return (
     <section className=" bg-gray-50">
       <div className="containerCustom mx-auto px-4 py-10 ">
-        <img src={profileImage} className="w-full h-64 object-cover rounded-lg shadow" alt={profileImage} />
+        <img 
+          src={profileImage}
+          className="w-full h-64 object-cover rounded-lg shadow" 
+          alt={profileImage} 
+        />
         <div className="max-w-[1000px] m-auto text-center mb-12 mt-10 ">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 
               style={{
@@ -24,7 +28,7 @@ const CompanyProfile = () => {
           </div>
 
         {/* Profile Card */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border-[#015099] border-l-6 ">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 md:mt-30 md:mb-12 border-[#015099] border-l-6 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             {/* Left Column */}

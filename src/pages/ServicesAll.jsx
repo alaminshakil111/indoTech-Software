@@ -21,19 +21,27 @@ const ServicesAll = () => {
                     <h4 className="textColor text-[20px] lg:text-[24px] font-regular text-center mb-12 leading-tight "> Comprehensive solutions designed to accelerate your business operations and boost team productivity. </h4>
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1  gap-8">
                     {servicesData.map((service, index) => (
                     <div
-                    key={index}
-                    className="rounded-[10px] shadow-md hover:shadow-[0px_0px_9px_0px_#b37070] transition duration-300 bg-transparent dark:bg-[#192030] flex flex-col h-full ">
+                        key={index}
+                        className={` grid grid-cols-1 md:grid-cols-2 rounded-[10px] shadow-[0px_0px_9px_0px_#afafaf]
+                        hover:shadow-[0px_0px_9px_0px_#8891dd] transition duration-300 bg-transparent dark:bg-[#192030] h-full 
+                        ${index % 2 !== 0 ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1" : ""}
+                        `} >
                     <img
                         src={service.img}
                         alt={service.title}
-                        className="w-full h-[220px] object-cover rounded-tl-[10px] rounded-tr-[10px]"
+                        className={`w-full h-auto object-cover rounded-tl-[10px] rounded-tr-[10px]
+                        ${
+                        index % 2 === 0
+                            ? "md:rounded-l-[10px] md:rounded-r-none"
+                            : "md:rounded-r-[10px] md:rounded-l-none"
+                        }`} 
                     />
 
                     {/* This div will stretch to fill remaining space */}
-                    <div className="px-3 pb-3 flex flex-col grow">
+                    <div className=" p-20 flex flex-col grow">
                         <h4 className="textColor text-[20px] lg:text-[24px] font-semibold mt-1">
                         {service.title}
                         </h4>
@@ -50,7 +58,7 @@ const ServicesAll = () => {
                             <NavLink
                                 key={service.id}
                                 to={`/services/${service.id}`}
-                                className="cardButton min-w-[110px] ">
+                                className="btnGradient min-w-[110px] ">
                                 View Details
                             </NavLink>
                         
