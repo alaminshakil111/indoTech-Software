@@ -2,19 +2,13 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // Local imports
-import bgShape from "../assets/images/bgsec.png";
 
 import {servicesData} from "../Data/ServicesData";
 
 const ServicesAll = () => {
   return (
     <>
-        <div className="servicesSection relative bg-no-repeat " 
-            style={{
-            backgroundImage: `url(${bgShape})`,
-            backgroundPosition: "top left",
-            backgroundSize: "auto"
-            }}>
+        <div className="pagesBgColor relative bg-no-repeat " >
             <div className="containerCustom px-4 py-10 lg:py-[75px]">
                 <div className="max-w-[1000px] m-auto " >
                     <h2 className="text-[24px] lg:text-[36px] font-bold text-center text-[#0072B5] mb-3">Our Services</h2>
@@ -27,14 +21,15 @@ const ServicesAll = () => {
                         key={index}
                         className={` grid grid-cols-1 md:grid-cols-2 rounded-[10px] shadow-[0px_0px_9px_0px_#afafaf]
                         hover:shadow-[0px_0px_9px_0px_#8891dd] transition duration-300 bg-transparent dark:bg-[#192030] h-full 
-                        ${index % 2 !== 0 ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1" : ""}
+                        ${index % 2 !== 0 
+                            ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1" 
+                            : ""}
                         `} >
                     <img
                         src={service.img}
                         alt={service.title}
-                        className={`w-full h-auto object-cover rounded-tl-[10px] rounded-tr-[10px]
-                        ${
-                        index % 2 === 0
+                        className={`w-full h-auto object-cover rounded-t-[10px] 
+                        ${index % 2 === 0
                             ? "md:rounded-l-[10px] md:rounded-r-none"
                             : "md:rounded-r-[10px] md:rounded-l-none"
                         }`} 

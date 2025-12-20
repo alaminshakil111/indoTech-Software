@@ -8,7 +8,8 @@
   --nav-hover-color: #338EC4;
   --nav-active-color: #338EC4; 
   --services-background-color: #DAE7F6;
-  --solutions-backgrond-color: #015099;
+  --solutions-backgrond-color: #86B3D9;
+  --pages-background-color: #DAE7F6;
 
   
 }
@@ -24,6 +25,7 @@
   --nav-active-color: #338EC4;
   --services-background-color: #101828;
   --solutions-backgrond-color: #101828;
+  --pages-background-color: #101828;
 
 }
 body{
@@ -42,6 +44,10 @@ body p{
 }
 .solutionsSection{
   background-color: var(--solutions-backgrond-color);
+}
+
+.pagesBgColor{
+  background-color: var(--pages-background-color);
 }
 .textColor{
   color: var(--primary-color);

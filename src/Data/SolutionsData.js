@@ -18,14 +18,6 @@ import lanWifiBanner from "../assets/images/solutions/lan_wifi/photo-16639322103
 import dxBanner from "../assets/images/solutions/dxSolution/photo-1517245386807-bb43f82c33c4.avif";
 import globalBanner from "../assets/images/solutions/global/photo-1763751276382-9040cadfacea.avif";
 
-
-import identitySecurity from "../assets/images/solutions/zeroTrust/identitySecurity.webp";
-import deviceSecurity from "../assets/images/solutions/zeroTrust/deviceSecurity.jpg";
-import microsegment from "../assets/images/solutions/zeroTrust/microsegment.jpg";
-import apllicationSecurity from "../assets/images/solutions/zeroTrust/apllicationSecurity.jpg";
-import dataSecurity from "../assets/images/solutions/zeroTrust/dataSecurity.webp";
-import analiticsMonitoring from "../assets/images/solutions/zeroTrust/analiticsMonitoring.avif";
-
 import productSdWan from "../assets/images/solutions/sdWan/Product_SD_WAN.jpg";
 import diySdwan from "../assets/images/solutions/sdWan/diySdwan.jpg";
 import cloudSdwan from "../assets/images/solutions/sdWan/cloudSdwan.webp";
@@ -44,13 +36,10 @@ import wirelessLan from "../assets/images/solutions/lan_wifi/wirelessLan.jpg";
 import hybrid from "../assets/images/solutions/lan_wifi/hybrid.jpg";
 import enterpriseWifi from "../assets/images/solutions/lan_wifi/wifi-enterprise-illustration.png";
 import pointToPoint from "../assets/images/solutions/lan_wifi/point_to_point.png";
-import mesh from "../assets/images/solutions/lan_wifi/mesh.jpg";
 
 import businessDigital from "../assets/images/solutions/dxSolution/businessDigital.avif";
 import rpaAi from "../assets/images/solutions/dxSolution/rpaAi.webp";
-import cloudTransformation from "../assets/images/solutions/dxSolution/cloudTransformation.jpg";
 import datavisualization from "../assets/images/solutions/dxSolution/datavisualization.avif";
-import integration from "../assets/images/solutions/dxSolution/integration.png";
 import workplace from "../assets/images/solutions/dxSolution/workplace.png";
 import customerexperience from "../assets/images/solutions/dxSolution/customerexperience.png";
 
@@ -65,8 +54,6 @@ import cloudInfrusture from "../assets/images/solutions/global/cloudInfrusture.w
 import cyberSecurity from "../assets/images/solutions/global/cyberSecurity.jpg";
 import businessProcess from "../assets/images/solutions/global/businessProcess.jpg";
 import enterprise from "../assets/images/solutions/global/enterprise.webp";
-import digitalTransform from "../assets/images/solutions/global/digitalTransform.jpg";
-import globalManaged from "../assets/images/solutions/global/Global-Managed-Services.png";
 
 export const solutionsData = [
   {
