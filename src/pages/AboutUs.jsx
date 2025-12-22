@@ -27,7 +27,7 @@ const aboutData = {
   whoWeAre: {
     title: "Who We Are",
     description:
-      "Attrabit ICT Solution is a Japan-based total IT solutions company delivering end-to-end technology services designed to help businesses innovate, scale and strengthen their digital capabilities. With operational presence in Japan and Bangladesh, we specialize in IT Infrastructure Solutions, Cloud Computing, Cybersecurity, Network Engineering, Managed IT Services, Software Development, Mobile App Development, AI Automation, Data Analytics and Digital Transformation Services. Our global delivery model ensures reliable, secure and future-ready ICT solutions for clients across multiple industries.",
+      "IndoTech is a Japan-based total IT solutions company delivering end-to-end technology services designed to help businesses innovate, scale and strengthen their digital capabilities. With operational presence in Japan and Bangladesh, we specialize in IT Infrastructure Solutions, Cloud Computing, Cybersecurity, Network Engineering, Managed IT Services, Software Development, Mobile App Development, AI Automation, Data Analytics and Digital Transformation Services. Our global delivery model ensures reliable, secure and future-ready ICT solutions for clients across multiple industries.",
   },
 
   mission: {
@@ -143,12 +143,22 @@ const AboutUs = () => {
       </div>
 
       <div
-        className="relative lg:pl-8 border-l-4 border-[#0072B5] bg-cover bg-center bg-no-repeat rounded-2xl overflow-hidden"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="solutionsSection relative bg-no-repeat flex flex-col gap-4 sm:flex-row sm:gap-4 items-end 
+                pt-[20px] pb-[20px] pr-[20px] lg:pt-[60px] lg:pb-[60px] lg:pl-[55px] lg:pr-0!
+
+                before:content-[''] 
+                before:absolute 
+                before:bottom-[20%] 
+                before:left-0 
+                before:w-[40%] 
+                before:h-[20%] 
+                before:bg-[url('/images/indotech_logo.png')] 
+                before:bg-no-repeat 
+                before:bg-cover"
       >
-        <div className="absolute inset-0 bg-black/50 dark:bg-black/60"></div>
-        <div className="containerCustom px-4 py-10 lg:p-[90px]">
-          <div className="relative z-10 bg-white/85 rounded-[15px] px-8 py-5 lg:p-[50px] ">
+
+        <div className="containerCustom relative z-10 px-4 py-10 lg:py-[75px] bg-white rounded-l-[15px] lg:px-20 lg:mr-0!   ">
+          <div className="relative z-10 bg-white/85 rounded-l-[15px]  px-4 py-5 lg:p-[50px]  ">
             <div className="relative lg:pl-[20px] mb-10  ">
               <span className="absolute -left-4 top-2 w-3 h-3 bg-[#0072B5] "></span>
               <h3 className="text-[#444a4e] text-[22px] font-bold">
@@ -205,7 +215,7 @@ const AboutUs = () => {
 
       <div className="containerCustom px-4 py-10 lg:p-[90px]">
         {aboutData.highlightSection.enable && (
-          <div className="mt-20 bg-[#F4FAFF] dark:bg-[#1f2937] p-10 rounded-[15px] shadow-sm">
+          <div className="mt-20 bg-[#F4FAFF] dark:bg-[#1f2937] p-5 md:10 rounded-[15px] shadow-sm">
             <h3 className="textColor text-[20px] lg:text-[30px] font-bold text-[#0072B5] text-center mb-4 uppercase ">
               {aboutData.highlightSection.title}
             </h3>

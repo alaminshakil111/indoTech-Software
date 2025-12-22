@@ -8,7 +8,7 @@ import {servicesData} from "../Data/ServicesData";
 const ServicesAll = () => {
   return (
     <>
-        <div className="pagesBgColor relative bg-no-repeat " >
+        <div className="bg-[#F7F8FA] relative bg-no-repeat " >
             <div className="containerCustom px-4 py-10 lg:py-[75px]">
                 <div className="max-w-[1000px] m-auto " >
                     <h2 className="text-[24px] lg:text-[36px] font-bold text-center text-[#0072B5] mb-3">Our Services</h2>
@@ -19,8 +19,8 @@ const ServicesAll = () => {
                     {servicesData.map((service, index) => (
                     <div
                         key={index}
-                        className={` grid grid-cols-1 md:grid-cols-2 rounded-[10px] shadow-[0px_0px_9px_0px_#afafaf]
-                        hover:shadow-[0px_0px_9px_0px_#8891dd] transition duration-300 bg-transparent dark:bg-[#192030] h-full 
+                        className={` relative grid grid-cols-1 md:grid-cols-2 bg-white dark:bg-[#192030] rounded-[10px] shadow-[0px_0px_9px_0px_#afafaf]
+                        hover:shadow-[0px_0px_9px_0px_#8891dd] transition duration-300  h-full 
                         ${index % 2 !== 0 
                             ? "md:[&>*:first-child]:order-2 md:[&>*:last-child]:order-1" 
                             : ""}
@@ -36,6 +36,9 @@ const ServicesAll = () => {
                     />
 
                     {/* This div will stretch to fill remaining space */}
+                    <div className=" hidden  lg:block bg-white absolute h-[70%] w-[10%] left-[50%] top-[50%] 
+                    transform -translate-x-1/2 -translate-y-1/2 "> </div>
+
                     <div className=" p-20 flex flex-col grow">
                         <h4 className="textColor text-[20px] lg:text-[24px] font-semibold mt-1">
                         {service.title}
@@ -46,10 +49,6 @@ const ServicesAll = () => {
                         </p>
 
                         <div className="mt-5 flex justify-between gap-2">
-                            {/* <button className="cardButton min-w-[110px] ">
-                                <a href="tel:+880123456789"> Call Now </a>
-                            </button> */}
-                            
                             <NavLink
                                 key={service.id}
                                 to={`/services/${service.id}`}

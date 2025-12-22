@@ -22,6 +22,7 @@ import RecruitmentDetails from './pages/RecruitmentDetails';
 import ScrollToTop from './component/ScrollToTop';
 import CompanyProfile from './pages/CompanyProfile';
 import Flyer from './component/Flyer';
+import OurPartner from './pages/OurPartner';
 
 export default function App() {
   return (
@@ -46,6 +47,7 @@ export default function App() {
           <Route path='/RecruitmentDetails/:id' element = { <RecruitmentDetails/> } />
           <Route path='/contact' element = { <ContactForm/> } />
           <Route path='/privacypolicy' element = { <PrivacyPolicy/> } />
+          <Route path='/ourpartner' element={ <OurPartner/> } />
         </Routes>
         {/* <AddressMap/> */}
         {/* <SocialLink/> */}

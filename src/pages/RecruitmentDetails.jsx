@@ -267,10 +267,11 @@ const RecruitmentDetails = () => {
 
           <button
             type="submit"
-            className={`btnBorder w-max ${submitting ? "opacity-50 pointer-events-none" : ""}`}
+            className={`btnGradient w-max ${submitting ? "opacity-50 pointer-events-none" : ""}`}
           >
             {submitting ? "Submitting..." : "Submit Application"}
           </button>
+
         </form>
       </div>
     </div>

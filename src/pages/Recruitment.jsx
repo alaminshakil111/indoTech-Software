@@ -1,9 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // import from local
 import Banner from '../assets/images/recruitment/recruitmentbanner.png';
 import { recruitmentData } from "../Data/RecruitmentData";
+
+const whyLoveUs = [
+  {
+    title: "Innovative Projects",
+    desc: "Build smart, scalable solutions using the latest technologies.",
+  },
+  {
+    title: "Global Exposure",
+    desc: "Collaborate with diverse teams and clients around the world.",
+  },
+  {
+    title: "Growth & Learning",
+    desc: "Access training, mentorship and opportunities to level up your skills.",
+  },
+  {
+    title: "Impactful Work",
+    desc: "Your ideas and contributions make a real difference.",
+  },
+  {
+    title: "People-First Culture",
+    desc: "We value teamwork, respect and personal growth.",
+  },
+];
 
 const Recruitment = () => {
   return (
@@ -15,19 +38,32 @@ const Recruitment = () => {
             
             <div className=" w-[90%] mx-auto relative bg-[#fff] shadow-md dark:bg-[#192030] text-left -mt-[50px] rounded-[15px] p-4 lg:p-7 mb-16">
                 <h2 className="text-[24px] lg:text-[36px] font-bold text-[#0072B5] mb-4">
-                Careers at AttraBit ICT Solution
+                Careers at IndoTech
                 </h2>
 
                 <p className="textColor text-[15px] leading-7">
-                AttraBit ICT Solutions is a Japan-based technology firm dedicated to 
-                delivering high-quality IT services, digital transformation solutions, 
-                and infrastructure optimization. We believe in empowering businesses through innovation, global expertise, 
-                and a strong commitment to service excellence.  
+                IndoTech is a Japan-based technology company specializing in comprehensive IT services, digital transformation, and infrastructure optimization. With a strong focus on quality, reliability, and long-term partnerships, IndoTech supports organizations in achieving operational excellence through innovative and scalable technology solutions.
                 </p>
 
-                <p className="textColor text-[15px] leading-7 mt-4">
-                Join our talented team and help us build the next generation of smart, 
-                scalable, and impactful digital solutions.
+                <h3 className="font-semibold mt-4 mb-2 text-[#0072B5]">
+                    Why You’ll Love Working With Us:
+                </h3>
+
+                <ul className=" textColor list-disc ml-6 space-y-1">
+                    {whyLoveUs.map((item, index) => (
+                    <li key={index}>
+                        <strong>{item.title}:</strong> {item.desc}
+                    </li>
+                    ))}
+                </ul>
+
+                <p className=" textColor mt-4">
+                    We are looking for passionate, creative and driven professionals
+                    ready to solve challenges, innovate and grow with us.
+                </p>
+
+                <p className=" textColor mt-2 font-semibold">
+                    Be part of our journey. Apply today and help shape the future of IT.
                 </p>
             </div>
 
@@ -57,12 +93,15 @@ const Recruitment = () => {
                     <strong>Type:</strong> {job.type}
                     </p>
 
-                    <Link
-                    to={`/RecruitmentDetails/${job.id}`}
-                    className="inline-block mt-5 bg-[#0072B5] text-white px-5 py-2 rounded-lg hover:bg-[#005b91]"
-                    >
-                    Apply Now
-                    </Link>
+                    <div className="mt-5 flex justify-between gap-2">
+                        <NavLink
+                            to={`/RecruitmentDetails/${job.id}`}
+                            className="btnGradient w-fit ">
+                            Check Details
+                        </NavLink>
+                    </div>
+
+                    
                 </div>
                 ))}
             </div>

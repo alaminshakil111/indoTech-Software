@@ -63,6 +63,28 @@ export const solutionsData = [
     title: "ICT Solutions",
     subtitle:
       "We provide end-to-end ICT solutions to ensure your infrastructure, applications and data are secure, reliable and scalable. Our expertise spans cloud management, servers and storage, databases and fraud prevention, enabling businesses to operate efficiently and safely.",
+    links: [
+      {
+        label: "Cloud Management",
+        to: "/solutions/solution-ict",
+        tabIndex: 0,
+      },
+      {
+        label: "Servers & Storage",
+        to: "/solutions/solution-ict",
+        tabIndex: 1,
+      },
+      {
+        label: "Database",
+        to: "/solutions/solution-ict",
+        tabIndex: 2,
+      },
+      {
+        label: "Crime Prevention Security",
+        to: "/solutions/solution-ict",
+        tabIndex: 3,
+      },
+    ],
     details: {
       "Cloud Management": {
         img: cloudImg,
@@ -245,6 +267,23 @@ export const solutionsData = [
     title: "Networks Solutions",
     subtitle:
       "We provide end-to-end network solutions that ensure reliable connectivity, enhanced communication and robust security. Our services cover data networking, audio/video systems and security implementation, designed to optimize your business operations.",
+    links: [
+      {
+        label: "Data Network",
+        to: "/solutions/solution-network",
+        tabIndex: 0,
+      },
+      {
+        label: "Audio and Video Solutions",
+        to: "/solutions/solution-network",
+        tabIndex: 1,
+      },
+      {
+        label: "Security Implementation",
+        to: "/solutions/solution-network",
+        tabIndex: 2,
+      },
+    ],
     details: {
       "Data Network": {
         img: networkImg,
@@ -382,110 +421,7 @@ export const solutionsData = [
       },
     },
   },
-  // {
-  //   id: "solution-zerotrustsecurity",
-  //   img: solution3,
-  //   title: "Zero Trust Security",
-  //   subtitle: "We help businesses secure their entire digital ecosystem with Zero Trust — a modern security approach that assumes no user, device or application should be trusted by default. Every access request is verified, monitored and controlled to protect your organization from cyber threats.",
-  //   details: {
-  //     "Identity Security": {
-  //       heading : "Identity & Access Control",
-  //       para1: "Identity Security ensures only verified users can access your systems. Every login request is authenticated and authorized using strong, modern security methods.",
-  //       what: [
-  //         "Multi-Factor Authentication (MFA): Extra layer of protection beyond passwords.",
-  //         "Single Sign-On (SSO): Secure and simple login across all apps.",
-  //         "Role-based access: Users get only the access they need.",
-  //         "Identity lifecycle management: Onboarding and offboarding handled securely.",
-  //       ],
-  //       img : identitySecurity,
 
-  //       clients: [
-  //         "It dramatically reduces the risk of account breaches and ensures only trusted users enter your environment."
-  //       ],
-  //     },
-  //     "Device Security": {
-  //       heading : "Device Verification & Compliance",
-  //       para1: "Zero Trust verifies the security health of every device — laptops, mobiles, tablets, desktops — before granting access.",
-  //       what: [
-  //         "Device health check: OS version, patches and antivirus status are verified.",
-  //         "Secure BYOD support: Staff can safely use personal devices.",
-  //         "Real-time monitoring: Detect compromised or risky devices instantly.",
-  //         "Automatic quarantine: Unsafe devices are blocked from the network.",
-  //         "Central compliance dashboard: Full visibility of all devices.",
-  //       ],
-  //       img : deviceSecurity,
-
-  //       clients: [
-  //         "It prevents attackers from using infected or unmanaged devices to enter the network."
-  //       ],
-  //     },
-  //     "Network Security (Micro-Segmentation)": {
-  //       heading : "Network Control & Limited Access Zones",
-  //       para1: "Instead of trusting the internal network, Zero Trust breaks it into small, secure segments. Users only access what they absolutely need.",
-  //       what: [
-  //         "Zero Trust Network Access (ZTNA): Replaces old VPNs with secure access.",
-  //         "Micro-segmentation: Blocks lateral movement during a breach.",
-  //         "Encrypted traffic: All communication is protected end-to-end.",
-  //         "Context-based access rules: Access depends on identity, location, device and behavior.",
-  //         "Continuous verification: Not a one-time login — checks happen throughout the session.",
-  //       ],
-  //       img : microsegment,
-
-  //       clients: [
-  //         "Even if one part of the network is attacked, the threat cannot spread."
-  //       ],
-  //     },
-  //     "Application Security": {
-  //       heading : "Secure App Access & API Protection",
-  //       para1: "Applications and APIs require verification before communicating or sharing data. This prevents attacks targeting apps or backend systems.",
-  //       what: [
-  //         "Application-level authentication: Only verified traffic reaches apps.",
-  //         "API security: Prevents unauthorized API calls and data misuse.",
-  //         "Secure access policies: Users can only use apps they are approved for.",
-  //         "Runtime protection: Apps are monitored for abnormal activity.",
-  //         "Protection from common attacks: OWASP threats, injection, bot attacks, etc.",
-  //       ],
-  //       img : apllicationSecurity,
-
-  //       clients: [
-  //         "It stops attackers from exploiting vulnerabilities in applications or APIs."
-  //       ],
-  //     },
-  //     "Data Security": {
-  //       heading : "Data Protection & Access Control",
-  //       para1: "Zero Trust protects sensitive data no matter where it lives — in the cloud, on devices or in applications.",
-  //       what: [
-  //         "Data classification: Identifies sensitive vs non-sensitive data.",
-  //         "Data encryption: Protects data at rest and in transit.",
-  //         "Data Loss Prevention (DLP): Stops unauthorized data sharing or downloads.",
-  //         "Access logging: Tracks who accessed what data and when.",
-  //         "Policy enforcement: Prevents data misuse or leaks.",
-  //       ],
-  //       img : dataSecurity,
-
-  //       clients: [
-  //         "It ensures that confidential information remains protected and compliant with regulations."
-  //       ],
-  //     },
-  //     "Analytics & Monitoring": {
-  //       heading : "Continuous Monitoring & Threat Detection",
-  //       para1: "Zero Trust uses AI and behavioral analytics to detect suspicious activity in real time.",
-  //       what: [
-  //         "Behavior analytics (UEBA): Identifies abnormal user or device actions.",
-  //         "Real-time alerts: Instant notifications of threats.",
-  //         "Threat detection: Identifies ransomware, malware and insider attacks.",
-  //         "Automated response: Suspicious sessions can be blocked automatically.",
-  //         "Full visibility: A complete picture of all user and device activity.",
-  //       ],
-  //       img : analiticsMonitoring,
-
-  //       clients: [
-  //         "It helps stop attacks early and reduces the impact of breaches."
-  //       ],
-  //     },
-
-  //   },
-  // },
   {
     id: "solution-sdwan",
     img: solution4,
@@ -493,6 +429,28 @@ export const solutionsData = [
     title: "SD WAN Solution",
     subtitle:
       "We provide flexible, secure and high-performance SD-WAN solutions tailored to your business needs. Whether you prefer fully managed services, self-managed setups, cloud-delivered deployments or hybrid models, our SD-WAN solutions optimize connectivity, reliability and control.",
+    links: [
+      {
+        label: "Managed SD-WAN Solution",
+        to: "/solutions/solution-sdwan",
+        tabIndex: 0,
+      },
+      {
+        label: "DIY (Self-Managed) SD-WAN Solution",
+        to: "/solutions/solution-sdwan",
+        tabIndex: 1,
+      },
+      {
+        label: "Cloud-Delivered SD-WAN Solution",
+        to: "/solutions/solution-sdwan",
+        tabIndex: 2,
+      },
+      {
+        label: "Hybrid SD-WAN Solution",
+        to: "/solutions/solution-sdwan",
+        tabIndex: 3,
+      },
+    ],
     details: {
       "Managed SD-WAN Solution": {
         img: productSdWan,
@@ -675,6 +633,13 @@ export const solutionsData = [
     title: "LAN & WiFi Solution",
     subtitle:
       "We design, deploy and manage enterprise-grade LAN and Wi-Fi networks using Cisco and FortiGate solutions, including Cisco ASA security appliances for firewalling and VPN. Our networks deliver high performance, reliability and security for all business environments, from small offices to large campuses.",
+    links: [
+      { label: "Wired LAN Solution (Ethernet LAN)", to: "/solutions/solution-lanwifi", tabIndex: 0 },
+      { label: "Wireless LAN / WiFi Solution", to: "/solutions/solution-lanwifi", tabIndex: 1 },
+      { label: "Hybrid LAN + WiFi Solution", to: "/solutions/solution-lanwifi", tabIndex: 2 },
+      { label: "Enterprise WiFi Solution", to: "/solutions/solution-lanwifi", tabIndex: 3 },
+      { label: "Point-to-Point & Mesh WiFi Solution", to: "/solutions/solution-lanwifi", tabIndex: 4 },
+    ],
     details: {
       "Wired LAN Solution (Ethernet LAN)": {
         img: ethernetLan,
@@ -905,6 +870,13 @@ export const solutionsData = [
     title: "DX Solution",
     subtitle:
       "We help organizations modernize operations, adopt new technologies and improve customer experiences through digital transformation. Our DX solutions combine strategy, technology and process optimization to achieve measurable business outcomes.",
+    links: [
+      { label: "IT Modernization & Cloud Adoption", to: "/solutions/solution-dx", tabIndex: 0 },
+      { label: "Process Automation & Workflow Optimization", to: "/solutions/solution-dx", tabIndex: 1 },
+      { label: "Customer Experience (CX) Digitalization", to: "/solutions/solution-dx", tabIndex: 2 },
+      { label: "Data Analytics & Business Intelligence", to: "/solutions/solution-dx", tabIndex: 3 },
+      { label: "Enterprise Mobility & Collaboration", to: "/solutions/solution-dx", tabIndex: 4 },
+    ],
     details: {
       "IT Modernization & Cloud Adoption": {
         heading: "IT Modernization & Cloud Adoption",
@@ -1105,6 +1077,14 @@ export const solutionsData = [
     title: "Internal AI Solutions",
     subtitle:
       "We help organizations leverage AI internally to optimize operations, automate processes, enhance decision-making and improve security. Our AI solutions cover automation, predictive analytics, chatbots, document intelligence, recommendations and monitoring systems.",
+    links: [
+      { label: "AI Automation Systems", to: "/solutions/solution-internalai", tabIndex: 0 },
+      { label: "AI Predictive Analytics", to: "/solutions/solution-internalai", tabIndex: 1 },
+      { label: "AI Chatbots & Virtual Assistants", to: "/solutions/solution-internalai", tabIndex: 2 },
+      { label: "Document Intelligence & AI OCR Systems", to: "/solutions/solution-internalai", tabIndex: 3 },
+      { label: "AI Recommendation & Decision Systems", to: "/solutions/solution-internalai", tabIndex: 4 },
+      { label: "AI Monitoring & Security Intelligence", to: "/solutions/solution-internalai", tabIndex: 5 },
+    ],
     details: {
       "AI Automation Systems": {
         heading: "AI Automation Systems",
@@ -1329,6 +1309,12 @@ export const solutionsData = [
     title: "Global Solutions",
     subtitle:
       "We provide comprehensive global IT solutions designed to help enterprises scale internationally. Our services cover cloud and infrastructure, cybersecurity, business process automation and enterprise. We provide comprehensive global IT solutions designed to help enterprises scale internationally. Our services cover cloud and infrastructure, cybersecurity, business process automation, enterprise software, digital transformation and global IT support, ensuring consistent performance and security across regions.",
+    links: [
+      { label: "Cloud & Infrastructure Solutions", to: "/solutions/solution-globalsolution", tabIndex: 0 },
+      { label: "Cybersecurity & Data Protection Solutions", to: "/solutions/solution-globalsolution", tabIndex: 1 },
+      { label: "Business Process Automation Solutions", to: "/solutions/solution-globalsolution", tabIndex: 2 },
+      { label: "Enterprise Software Solutions", to: "/solutions/solution-globalsolution", tabIndex: 3 },
+    ],
     details: {
       "Cloud & Infrastructure Solutions": {
         heading: "Cloud & Infrastructure Solutions",

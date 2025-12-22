@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom";
 import ictManaged from "../assets/images/services/itmanaged/managed-services23.jpg";
 import developerAi from "../assets/images/services/artifficial/developer-ai-349.png";
 import softwareBanner from "../assets/images/services/softwareDev/softwareBanner.avif";
+import zeroTrustBanner from "../assets/images/services/zeroTrust/photo-1550751827-4bd374c3f58b.avif";
+import consultancyBanner from "../assets/images/consultancy/business/businessBanner.jpg";
 
 const slidesData = [
   {
@@ -21,6 +23,13 @@ const slidesData = [
     moreLink: "/services/service-IctManagedServices",
   },
   {
+    id: "service-AI&Automation",
+    title: "AI & Automation",
+    description: `We deliver intelligent, data-driven solutions that automate workflows, improve decision-making and enhance productivity. Our AI systems are built with strong backend engineering, scalable cloud architecture and modern machine learning frameworks. Whether you want predictive analytics, automated business processes or virtual assistants—we design solutions that create measurable value.`,
+    image: developerAi,
+    moreLink: "/services/service-AI&Automation",
+  },
+  {
     id: "service-SoftwareDevelopment",
     title: "Software Development",
     description: `We deliver professional, reliable and scalable software solutions powered by a clean Java based backend architecture and a modern React/Next.js frontend stack. Our development process includes automated testing, CI/CD pipelines and a predictable delivery workflow. We transform client requirements into production-ready applications supported by long-term maintenance and continuous improvement.`,
@@ -28,12 +37,20 @@ const slidesData = [
     moreLink: "/services/service-SoftwareDevelopment",
   },
   {
-    id: "service-AI&Automation",
-    title: "AI & Automation",
-    description: `We deliver intelligent, data-driven solutions that automate workflows, improve decision-making and enhance productivity. Our AI systems are built with strong backend engineering, scalable cloud architecture and modern machine learning frameworks. Whether you want predictive analytics, automated business processes or virtual assistants—we design solutions that create measurable value.`,
-    image: developerAi,
-    moreLink: "/services/service-AI&Automation",
+    id: "service-zerotrustsecurity",
+    title: "Zero Trust Security",
+    description: `We help organizations implement Zero Trust principles to secure users, devices, applications and data. By continuously verifying identities and controlling access, we reduce risk, prevent breaches and protect critical assets.`,
+    image: zeroTrustBanner,
+    moreLink: "/services/service-zerotrustsecurity",
   },
+  {
+    id: "business",
+    title: "Business Consultancy",
+    description: `We help businesses grow strategically by providing expert guidance across IT marketing, international expansion and operational management. Our consultancy services combine industry insight, practical experience and actionable strategies to achieve measurable results.`,
+    image: consultancyBanner,
+    moreLink: "/services/business",
+  },
+  
 ];
 
 const Services = () => {

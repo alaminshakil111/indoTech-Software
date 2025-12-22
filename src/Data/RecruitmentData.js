@@ -5,7 +5,7 @@ export const recruitmentData = [
     id: 1,
     title: "Frontend Developer",
     department: "Software Development",
-    location: "Dhaka, Bangladesh",
+    location: "Tokyo, Japan",
     type: "Full-Time",
     vacancy: "01",
     shortDescription:
@@ -27,7 +27,7 @@ export const recruitmentData = [
     id: 2,
     title: "Backend Developer",
     department: "Software Development",
-    location: "Dhaka, Bangladesh",
+    location: "Tokyo, Japan",
     type: "Full-Time",
     vacancy: "01",
 
