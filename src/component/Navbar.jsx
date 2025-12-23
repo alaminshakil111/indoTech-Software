@@ -150,6 +150,7 @@ const computeResults = (q) => {
           <ul className="hidden lg:flex lg:items-center gap-4 font-medium lg:text-[16px]">
             <li><NavLink to="/" className={linkClass}> Home </NavLink></li>
             <li><NavLink to="/companyProfile" className={linkClass}> Company Profile </NavLink></li>
+            <li><NavLink to="/ourpartner" className={linkClass}> Our Partner </NavLink></li>
             {menuData.map((menu) => (
               <DesktopDropdown key={menu.title} menu={menu} linkClass={linkClass} />
             ))}
@@ -281,6 +282,11 @@ const computeResults = (q) => {
             <NavLink to="/companyProfile" onClick={() => setMobileOpen(false)} 
             className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Company Profile </NavLink>
           </li>
+          <li>
+            <NavLink to="/ourpartner" onClick={() => setMobileOpen(false)} 
+            className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Our Partner </NavLink>
+          </li>
+
           {menuData.map((menu) => (
             <MobileDropdown
               key={menu.title}
