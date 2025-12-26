@@ -2,16 +2,15 @@
 import service1 from "../assets/images/services/itmanaged/managed-services23.jpg";
 import service2 from "../assets/images/services/softwareDev/2e0700b919ea0ac80b9f6cb6f05813aa.jpg";
 import service3 from "../assets/images/services/artifficial/developer-ai-349.png";
-import service4 from "../assets/images/services/business/businessBanner.jpg";
+import service4 from "../assets/images/services/zeroTrust/photo-1550751827-4bd374c3f58b.avif";
 import consultancy1 from "../assets/images/consultancy/business/businessBanner.jpg";
-import solution3 from "../assets/images/solutions/solution3.jpg";
 import networkImg from "../assets/images/solutions/cloud/data-network.bb164a19166923a514ba.jpg";
 
 // import banner image
 
 import developerAi from "../assets/images/services/artifficial/developer-ai-349.png";
 import softwareBanner from "../assets/images/services/softwareDev/softwareBanner.avif";
-import ictManaged from "../assets/images/services/itmanaged/managed-services23.jpg";
+import ictManaged from "../assets/images/services/itmanaged/ictmanagedBanner.jpg";
 import zeroTrustBanner from "../assets/images/services/zeroTrust/photo-1550751827-4bd374c3f58b.avif";
 import consultancyBanner from "../assets/images/consultancy/business/photo-1551135049-83f3419ef05c.avif";
 
@@ -52,6 +51,7 @@ export const servicesData = [
       "We aim to foster a stable, secure and scalable IT environment where your operations run smoothly, your teams stay productive and your technology continuously supports your business growth. Our managed services take full ownership of your IT ecosystem so you can stay focused on your core goals.",
     details: {
       "Network Management": {
+        heading: "Network Management",
         para1:
           "We deliver reliable, high-performance network solutions that keep your business connected and scalable. From LAN/WAN design to monitoring and optimization, we ensure uninterrupted operations.",
 
@@ -97,6 +97,8 @@ export const servicesData = [
       },
 
       "Security Management": {
+        heading: "Security Management",
+
         para1:
           "We protect your IT environment with advanced security solutions, threat monitoring and compliance-focused management. Our proactive approach reduces risks and ensures business continuity.",
 
@@ -142,6 +144,7 @@ export const servicesData = [
       },
 
       "Cloud Services & Hosting": {
+        heading: "Cloud Services & Hosting",
         para1:
           "We offer secure, scalable and optimized cloud solutions, from migration to ongoing management. Hosting, cloud applications and hybrid setups are delivered with performance and reliability in mind.",
 
@@ -187,6 +190,7 @@ export const servicesData = [
       },
 
       "Backup & Disaster Recovery": {
+        heading: "Backup & Disaster Recovery",
         para1:
           "We ensure your critical data and applications are protected and quickly recoverable. Our backup and DR solutions minimize business impact during failures.",
 
@@ -231,6 +235,8 @@ export const servicesData = [
       },
 
       "IT Strategy & Consulting": {
+        heading: "IT Strategy & Consulting",
+
         para1:
           "We help organizations align technology with business goals, optimize IT investments and plan for long-term growth. Our consulting delivers measurable impact and strategic insights.",
 
@@ -275,6 +281,7 @@ export const servicesData = [
       },
 
       "Helpdesk & Support": {
+        heading: "Helpdesk & Support",
         para1:
           "We provide responsive, multi-channel technical support that ensures users and systems stay productive. Our helpdesk covers everything from minor troubleshooting to critical incident management.",
 
@@ -331,6 +338,8 @@ export const servicesData = [
       "We deliver intelligent, data-driven solutions that automate workflows, improve decision-making and enhance productivity. Our AI systems are built with strong backend engineering, scalable cloud architecture and modern machine learning frameworks. Whether you want predictive analytics, automated business processes or virtual assistants—we design solutions that create measurable value.",
     details: {
       "AI Software & Machine Learning": {
+        heading: "AI Software & Machine Learning",
+
         para1:
           "We build custom AI and Machine Learning systems that analyse data, make predictions, automate decision-making and adapt over time. Our solutions integrate seamlessly with your existing applications through secure APIs and scalable infrastructure.",
 
@@ -387,6 +396,7 @@ export const servicesData = [
       },
 
       "Business & Workflow Automation": {
+        heading: "Business & Workflow Automation",
         para1:
           "We automate repetitive tasks, streamline internal processes and reduce operational costs using intelligent automation frameworks. From simple workflow triggers to fully automated business systems, we design solutions that eliminate manual work and improve efficiency.",
 
@@ -445,6 +455,8 @@ export const servicesData = [
       },
 
       "Virtual Assistants (AI Agents & Chatbots)": {
+        heading: "Virtual Assistants (AI Agents & Chatbots)",
+
         para1:
           "We develop intelligent virtual assistants that automate customer support, streamline internal operations and improve user engagement. Our AI agents can respond, process information, understand natural language and integrate with your backend systems in real time.",
 
@@ -514,6 +526,7 @@ export const servicesData = [
       "We deliver professional, reliable and scalable software solutions powered by a clean Java based backend architecture and a modern React/Next.js frontend stack. Our development process includes automated testing, CI/CD pipelines and a predictable delivery workflow. We transform client requirements into production-ready applications supported by long-term maintenance and continuous improvement.",
     details: {
       "Web Development": {
+        heading: "Web Development",
         para1:
           "We build responsive, fast and secure web applications using React, Next.js and Springboot. Whether you need a corporate website, SaaS platform, dashboard or eCommerce solution—we deliver high-performance, scalable and maintainable systems.",
 
@@ -566,6 +579,8 @@ export const servicesData = [
       },
 
       "Mobile App Development": {
+        heading: "Mobile App Development",
+
         para1:
           "We build native and cross-platform mobile apps with high performance, intuitive UX and secure backend integrations. From prototyping to app store release, we manage the full lifecycle.",
 
@@ -624,7 +639,7 @@ export const servicesData = [
   },
   {
     id: "service-zerotrustsecurity",
-    img: solution3,
+    img: service4,
     bannerImg: zeroTrustBanner,
     title: "Zero Trust Security",
     subtitle:

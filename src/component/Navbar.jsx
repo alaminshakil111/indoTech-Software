@@ -53,7 +53,7 @@ export default function Navbar() {
             { label: "ICT Managed Service", to: "/services/service-IctManagedServices" },
             { label: "Software Development", to: "/services/service-SoftwareDevelopment" },
             { label: "Zero Trust Security", to: "/services/service-zerotrustsecurity" },
-            { label: "Business Consultation", to: "/consultancy/business" },
+            { label: "Business Consultation", to: "/services/business" },
           ],
         },
       ],
@@ -134,7 +134,7 @@ const computeResults = (q) => {
   return (
     <nav className="fixed pl-4 pr-4 lg:pl-8  top-0 left-0 w-full bg-[#2b4b4c]/45 dark:bg-gray-900/20 shadow-md z-50">
 
-      <div className="w-full pl-4 pr-4 lg:pl-8   flex items-center justify-between gap-4 py-4 lg:py-2">
+      <div className="w-full pl-4 pr-4 lg:pl-8 flex items-center justify-between gap-4 py-4 lg:py-2">
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Attrabit Logo" 
           onClick={(e) => {
@@ -148,14 +148,27 @@ const computeResults = (q) => {
 
         <div className="flex flex-row gap-6 items-center">
           <ul className="hidden lg:flex lg:items-center gap-4 font-medium lg:text-[16px]">
-            <li><NavLink to="/" className={linkClass}> Home </NavLink></li>
-            <li><NavLink to="/companyProfile" className={linkClass}> Company Profile </NavLink></li>
-            <li><NavLink to="/ourpartner" className={linkClass}> Our Partner </NavLink></li>
+            <li>
+              <NavLink to="/" className={linkClass}> Home </NavLink>
+            </li>
+            
+            <li>
+              <NavLink to="/ourpartner" className={linkClass}> Our Partner </NavLink>
+            </li>
+
             {menuData.map((menu) => (
               <DesktopDropdown key={menu.title} menu={menu} linkClass={linkClass} />
             ))}
-            <li><NavLink to="/about-us" className={linkClass}>About Us</NavLink></li>
-            <li><NavLink to="/recruitment" className={linkClass}>Recruitment</NavLink></li>
+
+            <li>
+              <NavLink to="/about-us" className={linkClass}>About Us</NavLink>
+            </li>
+            <li>
+              <NavLink to="/companyProfile" className={linkClass}> Company Profile </NavLink>
+            </li>
+            <li>
+              <NavLink to="/recruitment" className={linkClass}>Recruitment</NavLink>
+            </li>
           </ul>
 
           {/* right controls */}
@@ -211,23 +224,23 @@ const computeResults = (q) => {
                       )}
                     </div>
                   ) : (
-                    // <div className="text-gray-500 p-2">Type to search services & solutions</div>
-                    <div></div>
+                    // <div className="text-gray-500 p-2">Type to search services & solutions </div>
+                    <div>  </div>
                   )}
                 </div>
               )}
             </div>
 
             {/* Theme toggle */}
-            <button onClick={toggleTheme} className="cursor-pointer">
+            {/* <button onClick={toggleTheme} className="cursor-pointer">
               {dark ? <FaSun className="text-yellow-400" /> : <FaMoon className=" text-[#D6D9D7]" />}
-            </button>
+            </button> */}
 
             <NavLink to="/contact" className="hidden lg:block btnBorder ">Contact</NavLink>
 
             {/* Mobile toggle */}
             <button onClick={() => setMobileOpen((m) => !m)} className="lg:hidden">
-              {mobileOpen ? <FaTimes size={22} className="text-red-500" /> : <FaBars size={22} className="dark:text-gray-300" />}
+              {mobileOpen ? <FaTimes size={22} className="text-red-500" /> : <FaBars size={22} className=" text-white " />}
             </button>
           </div>
         </div>
@@ -278,10 +291,7 @@ const computeResults = (q) => {
             <NavLink to="/" onClick={() => setMobileOpen(false)} 
             className={({ isActive }) => (isActive || pathname === "/" ? "nav-link active-link" : "nav-link text-white ")}> Home </NavLink>
           </li>
-          <li>
-            <NavLink to="/companyProfile" onClick={() => setMobileOpen(false)} 
-            className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Company Profile </NavLink>
-          </li>
+          
           <li>
             <NavLink to="/ourpartner" onClick={() => setMobileOpen(false)} 
             className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Our Partner </NavLink>
@@ -301,12 +311,15 @@ const computeResults = (q) => {
             <NavLink to="/about-us" onClick={() => setMobileOpen(false)} className={({ isActive }) => (isActive || pathname === "/about-us" ? "nav-link active-link" : "nav-link")}>About Us</NavLink>
           </li>
           <li>
+            <NavLink to="/companyProfile" onClick={() => setMobileOpen(false)} 
+            className={({ isActive }) => (isActive || pathname === "services/service-SoftwareDevelopment" ? "nav-link active-link" : "nav-link text-white ")}> Company Profile </NavLink>
+          </li>
+          <li>
             <NavLink to="/recruitment" onClick={() => setMobileOpen(false)} className={({ isActive }) => (isActive || pathname === "/recruitment" ? "nav-link active-link" : "nav-link")}>Recruitment</NavLink>
           </li>
-          <NavLink to="/contact" onClick={() => setMobileOpen(false)} className="w-fit btnGradient flex items-center gap-2 lg:mx-[110px]
-                lg:px-[90px]! lg:py-[85px] whitespace-nowrap ">
-                  Contact <HiOutlineArrowLongRight/>
-                </NavLink>
+          <NavLink to="/contact" onClick={() => setMobileOpen(false)} className="w-fit btnGradient flex items-center gap-2 lg:mx-[110px] lg:px-[90px]! lg:py-[85px] whitespace-nowrap ">
+            Contact <HiOutlineArrowLongRight/>
+          </NavLink>
         </ul>
       </div>
     </nav>

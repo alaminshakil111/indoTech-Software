@@ -3,7 +3,6 @@ import React from "react";
 // import from local
 
 import missionVission from "../assets/images/aboutUs/missonVission.webp";
-import heroBg from "../assets/images/aboutUs/photo-1723881007485-1d13d14eb981.jpg";
 
 const conceptData = {
   heading:
@@ -102,7 +101,7 @@ const AboutUs = () => {
   return (
     <div
       className="relative bg-no-repeat dark:bg-[#192030]" >
-      <div className="containerCustom px-4 py-10 lg:py-[90px]">
+      <div className="containerCustom px-4 py-24 lg:py-[90px]">
         {/* Section Heading */}
         <div className="max-w-[900px] mx-auto text-center mb-14">
           <h2 className="text-[24px] lg:text-[36px] font-bold text-[#0072B5] uppercase">
@@ -149,7 +148,7 @@ const AboutUs = () => {
                 before:content-[''] 
                 before:absolute 
                 before:bottom-[20%] 
-                before:left-0 
+                before:left-[-15%] 
                 before:w-[40%] 
                 before:h-[20%] 
                 before:bg-[url('/images/indotech_logo.png')] 
@@ -224,7 +223,7 @@ const AboutUs = () => {
               {aboutData.highlightSection.description}
             </p>
 
-            <div className="grid  gap-6 mt-8">
+            <div className="grid lg:grid-cols-2 gap-6 mt-8">
               {aboutData.highlightSection.features.map((item, index) => (
                 <div
                   key={index}

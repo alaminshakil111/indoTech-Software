@@ -1,8 +1,8 @@
 // import from local
 import solution1 from "../assets/images/solutions/solution1.jpg";
-import solution2 from "../assets/images/solutions/solution2.jpeg";
-import solution3 from "../assets/images/solutions/solution3.jpg";
-import solution4 from "../assets/images/solutions/solution4.jpg";
+import solution2 from "../assets/images/solutions/cloud/pngtree-network-concept-line-graphic-communication-photo-image_9001538.jpg";
+
+import solution4 from "../assets/images/solutions/sdWan/IPS-SD-WAN-Service.jpg";
 import solution5 from "../assets/images/solutions/solution5.jpg";
 import solution6 from "../assets/images/solutions/solution6.jpg";
 import solution7 from "../assets/images/solutions/solution7.jpg";
@@ -13,7 +13,8 @@ import solution8 from "../assets/images/solutions/solution8.jpg";
 // import banner image
 
 import ictsolutionBanner from "../assets/images/solutions/solution1.jpg";
-import sdBanner from "../assets/images/solutions/sdWan/sdBanner.jpg";
+import solutionNetwork from "../assets/images/solutions/cloud/photo-1642505510578-5fcbb8c52c79.avif";
+import sdBanner from "../assets/images/solutions/sdWan/IPS-SD-WAN-Service.jpg";
 import lanWifiBanner from "../assets/images/solutions/lan_wifi/photo-1663932210347-164a05ed0ccd.avif";
 import dxBanner from "../assets/images/solutions/dxSolution/photo-1517245386807-bb43f82c33c4.avif";
 import globalBanner from "../assets/images/solutions/global/photo-1763751276382-9040cadfacea.avif";
@@ -88,6 +89,8 @@ export const solutionsData = [
     details: {
       "Cloud Management": {
         img: cloudImg,
+        heading: "Cloud Management",
+
         para1:
           "We manage cloud environments to ensure high availability, performance and cost optimization. From migration to continuous monitoring, our services allow you to focus on core business activities.",
 
@@ -131,6 +134,8 @@ export const solutionsData = [
 
       "Servers & Storage": {
         img: serverImg,
+        heading: "Servers & Storage",
+
         para1:
           "We design, deploy and maintain robust server and storage solutions to meet the demands of your business operations.",
 
@@ -173,8 +178,9 @@ export const solutionsData = [
         },
       },
 
-      Database: {
+      "Database": {
         img: databaseImg,
+        heading: "Database",
         para1:
           "We provide database management, optimization and administration services to ensure your data is secure, accessible and performant.",
 
@@ -218,6 +224,8 @@ export const solutionsData = [
 
       "Cyber Security": {
         img: securityImg,
+        heading: "Cyber Security",
+
         para1:
           "We implement advanced systems to detect, prevent and respond to fraudulent activities, protecting your business and customers.",
 
@@ -263,7 +271,7 @@ export const solutionsData = [
   {
     id: "solution-network",
     img: solution2,
-    bannerImg: solution2,
+    bannerImg: solutionNetwork,
     title: "Networks Solutions",
     subtitle:
       "We provide end-to-end network solutions that ensure reliable connectivity, enhanced communication and robust security. Our services cover data networking, audio/video systems and security implementation, designed to optimize your business operations.",
@@ -287,6 +295,7 @@ export const solutionsData = [
     details: {
       "Data Network": {
         img: networkImg,
+        heading: "Data Network",
         para1:
           "We design, deploy and manage high-performance data networks that keep your business connected and scalable.",
 
@@ -333,6 +342,7 @@ export const solutionsData = [
 
       "Audio and Video Solutions": {
         img: avImg,
+        heading: "Audio and Video Solutions",
         para1:
           "We provide integrated audio and video systems for meetings, conferences and events, delivering seamless communication and collaboration.",
 
@@ -377,6 +387,8 @@ export const solutionsData = [
 
       "Security Implementation": {
         img: implementationImg,
+        heading: "Security Implementation",
+
         para1:
           "We implement physical and network security solutions to protect assets, data and personnel, ensuring comprehensive safety across your organization.",
 
@@ -454,6 +466,7 @@ export const solutionsData = [
     details: {
       "Managed SD-WAN Solution": {
         img: productSdWan,
+        heading: "Managed SD-WAN Solution",
         para1:
           "Our managed SD-WAN service provides end-to-end deployment, monitoring and optimization, allowing you to focus on your business while we handle your network.",
 
@@ -498,6 +511,8 @@ export const solutionsData = [
 
       "DIY (Self-Managed) SD-WAN Solution": {
         img: diySdwan,
+        heading: "DIY (Self-Managed) SD-WAN Solution",
+
         para1:
           "Our self-managed SD-WAN solution allows organizations to retain full control while leveraging our guidance, templates and tools for deployment and monitoring.",
 
@@ -541,6 +556,7 @@ export const solutionsData = [
 
       "Cloud-Delivered SD-WAN Solution": {
         img: cloudSdwan,
+        heading: "Cloud-Delivered SD-WAN Solution",
         para1:
           "We deliver SD-WAN services through a cloud-native platform, providing agility, rapid deployment and simplified network management.",
 
@@ -584,6 +600,7 @@ export const solutionsData = [
 
       "Hybrid SD-WAN Solution": {
         img: hybridSdWan,
+        heading: "Hybrid SD-WAN Solution",
         para1:
           "Our hybrid SD-WAN combines on-premises and cloud capabilities, offering flexibility, reliability and cost efficiency for complex network environments.",
 
@@ -643,6 +660,7 @@ export const solutionsData = [
     details: {
       "Wired LAN Solution (Ethernet LAN)": {
         img: ethernetLan,
+        heading: "Wired LAN Solution (Ethernet LAN)",
         para1:
           "We provide robust, secure and high-performance wired LAN solutions for reliable connectivity across offices, data centers and enterprise environments.",
 
@@ -686,6 +704,8 @@ export const solutionsData = [
 
       "Wireless LAN / WiFi Solution": {
         img: wirelessLan,
+        heading: "Wireless LAN / WiFi Solution",
+
         para1:
           "We deploy secure, high-performance Wi-Fi networks using Cisco access points, controllers and FortiGate/Cisco ASA security appliances for seamless connectivity.",
 
@@ -731,6 +751,8 @@ export const solutionsData = [
 
       "Hybrid LAN + WiFi Solution": {
         img: hybrid,
+        heading: "Hybrid LAN + WiFi Solution",
+
         para1:
           "Our hybrid solution combines wired and wireless networks for seamless connectivity, with full security using Cisco ASA and FortiGate appliances.",
 
@@ -775,6 +797,8 @@ export const solutionsData = [
 
       "Enterprise WiFi Solution (High-Density WiFi)": {
         img: enterpriseWifi,
+        heading: "Enterprise WiFi Solution (High-Density WiFi)",
+
         para1:
           "We design high-density Wi-Fi networks for large offices, auditoriums and campuses using Cisco high-capacity APs, controllers, ASA and FortiGate appliances.",
 
@@ -820,6 +844,8 @@ export const solutionsData = [
 
       "Point-to-Point & Mesh WiFi Solution": {
         img: pointToPoint,
+        heading: "Point-to-Point & Mesh WiFi Solution",
+
         para1:
           "We provide long-range point-to-point wireless links and mesh Wi-Fi using Cisco and FortiGate solutions, secured with Cisco ASA firewalls.",
 

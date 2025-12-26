@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
-import { BiArrowToBottom } from "react-icons/bi";
+import { FaArrowDown } from "react-icons/fa";
+
+import { LuArrowRightFromLine } from "react-icons/lu";
 import { NavLink } from "react-router-dom";
 
 // import from local
@@ -11,14 +13,23 @@ import ourPartner from '../assets/images/ourPartner/OurtPartnerBanner.avif'
 const OurPartner = () => {
     const productLineRefs = useRef({});
 
-    const [activeProductLine, setActiveProductLine] = useState(null);
-
     const handlePartnerClick = (partnerId) => {
-        productLineRefs.current[partnerId]?.scrollIntoView({
+        const element = productLineRefs.current[partnerId];
+
+        if (element) {
+            const offset = 110; // 🔹 top gap (px) — navbar height অনুযায়ী change করো
+            const elementPosition =
+            element.getBoundingClientRect().top + window.pageYOffset;
+
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+            top: offsetPosition,
             behavior: "smooth",
-            block: "start",
-        });
+            });
+        }
     };
+
 
 
 
@@ -58,12 +69,13 @@ const OurPartner = () => {
 
                                 {/* Overlay */}
                                 <div
-                                    className="absolute inset-0 bg-[#0072B5]/30 
+                                    className="absolute inset-0 bg-[#0072B5]/30
                                     flex items-center justify-center
                                     opacity-0 group-hover:opacity-100
                                     transition-all duration-300"
                                 >
-                                    <BiArrowToBottom className="text-white text-4xl animate-bounce bg-[#3683e7] rounded-full " />
+                                    <FaArrowDown  className="text-white text-3xl p-1 animate-bounce 
+                                    bg-[#3683e7] rounded-full " />
                                 </div>
                                 <img
                                     src={partner.logo}
@@ -102,7 +114,7 @@ const OurPartner = () => {
                                     opacity-0 group-hover:opacity-100
                                     transition-all duration-300"
                                 >
-                                    <BiArrowToBottom className="text-white text-3xl animate-bounce bg-[#3683e7] rounded-full " />
+                                    <FaArrowDown  className="text-white text-2xl p-1 animate-bounce bg-[#3683e7] rounded-full " />
                                 </div>
                                 <img
                                     src={partner.logobase}
@@ -143,13 +155,15 @@ const OurPartner = () => {
                             className="flex justify-between items-center border-b pb-3"
                             >
                             <span className="text-[15px]">{product}</span>
-                            <BiArrowToBottom className="text-[#0072B5]" />
+                            <LuArrowRightFromLine className="text-[#0072B5]" />
                             </div>
                         ))}
                         </div>
                     </div>
                     </div>
                 ))}
+
+                {/* second design content  */}
 
                 {ourPartnerLogoData.map((partner) => (
                     <div
@@ -174,7 +188,7 @@ const OurPartner = () => {
                             className="flex justify-between items-center border-b pb-3"
                             >
                             <span className="text-[15px]">{product}</span>
-                            <BiArrowToBottom className="text-[#0072B5]" />
+                            <LuArrowRightFromLine className="text-[#0072B5]" />
                             </div>
                         ))}
                         </div>

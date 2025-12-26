@@ -6,12 +6,13 @@ import profileImage from '../assets/images/companyPP.png';
 const CompanyProfile = () => {
   return (
     <section className=" bg-gray-50">
-      <div className="containerCustom mx-auto px-4 py-10 ">
-        <img 
+      <img 
           src={profileImage}
-          className="w-full h-64 object-cover rounded-lg shadow" 
+          className="w-full h-64 object-cover  shadow" 
           alt={profileImage} 
-        />
+      />
+      <div className="containerCustom mx-auto px-4 py-10 ">
+        
         <div className="max-w-[1000px] m-auto text-center mb-12 mt-10 ">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase mb-3 " 
               style={{

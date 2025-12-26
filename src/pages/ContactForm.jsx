@@ -22,13 +22,22 @@ import AddressMap from "@/component/AddressMap";
 const schema = yup.object().shape({ 
   fullName: yup.string().required("Full Name is required"),
   company: yup.string().required("Company Name is required"),
-  email: yup.string().email("Enter a valid email").required("Email is required"),
+  email: yup
+    .string()
+    .email("Enter a valid email")
+    .required("Email is required"),
+
   phone: yup
     .string()
-    .matches(/^(\+8801|01)[0-9]{9}$/, "Enter a valid Bangladeshi phone number")
+    .matches(
+      /^\+[1-9]\d{7,14}$/,
+      "Enter a valid international phone number (e.g. +81XXXXXXXXXX)"
+    )
     .required("Phone number is required"),
+
   message: yup.string().required("Message is required"),
 });
+
 
 const nextData = {
   stepsTitle: "What happens next?",
@@ -157,7 +166,7 @@ const formFields = [
   { name: "fullName", label: "Full Name", type: "text", textColor: "#000000" },
   { name: "company", label: "Company Name", type: "text", textColor: "#333333" },
   { name: "email", label: "Email Address", type: "email", textColor: "#000000" },
-  { name: "phone", label: "Phone Number", type: "text", textColor: "#000000" },
+  { name: "phone", label: "Phone Number (with country code)", type: "text", textColor: "#000000" },
   { name: "message", label: "Message", type: "textarea", textColor: "#000000" },
 ];
 

@@ -17,7 +17,7 @@ const locations = [
     email: "kojinjouhou@indotech.jp",
     bgImage: locationBgImg,
     mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3843.572356138776!2d139.75443697623166!3d35.695578029185015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s7F%20Kanda%20Jimbocho2-chome%20Building%2C%202-2%20Kanda%20Jimbocho%2C%20Chiyoda-ku%2C%20Japan!5e1!3m2!1sen!2sbd!4v1765970676896!5m2!1sen!2sbd",
+      "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d963.3267064182282!2d139.75744645443783!3d35.695910645504725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s7F%20Kanda%20Jimbocho2-chome%20Building%2C%202-2%20Kanda%20Jimbocho%2C%20Chiyoda-ku!5e0!3m2!1sen!2sbd!4v1766720632737!5m2!1sen!2sbd",
   },
 ];
 
@@ -29,7 +29,7 @@ const AddressMap = () => {
           key={index}
           className="w-full mx-auto grid md:grid-cols-2 gap-0 min-h-[500px]" >
           {/* Left Side - Contact Info */}
-          <div className="relative flex flex-col justify-center items-center px-10 py-12 bg-[#c3d2ff] text-black bg-cover bg-center" >
+          <div className="relative flex flex-col justify-center items-center px-10 py-12 bg-[#f9f9f9] text-black bg-cover bg-center" >
             <div className="absolute inset-0 "></div>
 
             <div className="relative z-10 space-y-4 whitespace-pre-line">

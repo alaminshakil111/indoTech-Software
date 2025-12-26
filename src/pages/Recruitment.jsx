@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // import from local
-import Banner from '../assets/images/recruitment/recruitmentbanner.png';
+import Banner from '../assets/images/recruitment/recruitmentbannerIndo.jpg';
 import { recruitmentData } from "../Data/RecruitmentData";
 
 const whyLoveUs = [
@@ -31,12 +31,14 @@ const whyLoveUs = [
 const Recruitment = () => {
   return (
     <div className="dark:bg-[#192030]">
+      <div>
+          <img src={Banner} alt="Recrtuiment banner" className="w-full  " />
+      </div>
         <div className="containerCustom px-4 py-12">
-            <div >
-                <img src={Banner} alt="Recrtuiment banner" className="w-full rounded-[15px] " />
-            </div>
             
-            <div className=" w-[90%] mx-auto relative bg-[#fff] shadow-md dark:bg-[#192030] text-left -mt-[50px] rounded-[15px] p-4 lg:p-7 mb-16">
+            
+            <div className=" w-[90%] mx-auto relative bg-[#fff] shadow-md dark:bg-[#192030] text-left 
+                -mt-[80px]  lg:-mt-[100px] rounded-[15px] p-4 lg:p-7 mb-16">
                 <h2 className="text-[24px] lg:text-[36px] font-bold text-[#0072B5] mb-4">
                 Careers at IndoTech
                 </h2>

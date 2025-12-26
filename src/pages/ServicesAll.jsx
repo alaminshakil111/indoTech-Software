@@ -9,7 +9,7 @@ const ServicesAll = () => {
   return (
     <>
         <div className="bg-[#F7F8FA] relative bg-no-repeat " >
-            <div className="containerCustom px-4 py-10 lg:py-[75px]">
+            <div className="containerCustom px-4 py-24 lg:py-[75px]">
                 <div className="max-w-[1000px] m-auto " >
                     <h2 className="text-[24px] lg:text-[36px] font-bold text-center text-[#0072B5] mb-3">Our Services</h2>
                     <h4 className="textColor text-[20px] lg:text-[24px] font-regular text-center mb-12 leading-tight "> Comprehensive solutions designed to accelerate your business operations and boost team productivity. </h4>
@@ -39,7 +39,7 @@ const ServicesAll = () => {
                     <div className=" hidden  lg:block bg-white absolute h-[70%] w-[10%] left-[50%] top-[50%] 
                     transform -translate-x-1/2 -translate-y-1/2 "> </div>
 
-                    <div className=" p-20 flex flex-col grow">
+                    <div className=" p-10 lg:p-20 flex flex-col grow">
                         <h4 className="textColor text-[20px] lg:text-[24px] font-semibold mt-1">
                         {service.title}
                         </h4>

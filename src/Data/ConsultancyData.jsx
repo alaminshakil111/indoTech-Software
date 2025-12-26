@@ -14,7 +14,7 @@ export const consultancyData = [
     subtitle:
       "We help businesses grow strategically by providing expert guidance across IT marketing, international expansion, and operational management. Our consultancy services combine industry insight, practical experience, and actionable strategies to achieve measurable results.",
     details: {
-  "Marketing Support": {
+    "Marketing Support": {
     heading: "IT Marketing Support",
     para1:
       "We assist companies in planning, executing, and optimizing IT marketing strategies to reach target audiences, generate leads, and improve brand visibility.",

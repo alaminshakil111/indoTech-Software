@@ -3,7 +3,8 @@
 export const recruitmentData = [
   {
     id: 1,
-    title: "Frontend Developer",
+    title: `Front-end
+    Engineer`,
     department: "Software Development",
     location: "Tokyo, Japan",
     type: "Full-Time",
@@ -25,7 +26,8 @@ export const recruitmentData = [
 
   {
     id: 2,
-    title: "Backend Developer",
+    title: `Backend
+    Engineer`,
     department: "Software Development",
     location: "Tokyo, Japan",
     type: "Full-Time",

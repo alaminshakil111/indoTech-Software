@@ -9,6 +9,17 @@ import flyer2 from '../assets/images/popUp/IT_omote_A4_chirashi_tate_ol_CS6.ai.p
 
 const Flyer = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isClosing, setIsClosing] = useState(false);
+
+    const handleClose = () => {
+        setIsClosing(true);
+
+        setTimeout(() => {
+            setIsOpen(false);
+            setIsClosing(false);
+        }, 300);
+    };
+
 
 
     return (
@@ -35,14 +46,15 @@ const Flyer = () => {
 
             {isOpen && (
                 <div className=' fixed inset-0 z-50 items-center flex justify-center bg-black/20 '
-                    onClick={()=> {setIsOpen(false)}}
+                    onClick={handleClose}
                 >
-                    <div className=' relative bg-white max-w-4xl w-[90%] p-7 rounded-[10px] popup-slide-down  '                     
+                    <div className={`relative bg-white max-w-4xl w-[90%] p-7 rounded-[10px]
+                            ${isClosing ? "popup-slide-up" : "popup-slide-down"} `}
+                        onClick={(e) => e.stopPropagation()}
                     >
                         <button className=' absolute right-2 top-2 text-xl text-gray-700 hover:text-red-700 
                                             cursor-pointer ' 
-                            onClick={()=> {setIsOpen(false)}}
-                        >
+                            onClick={handleClose} >
                             <GiTireIronCross />
                         </button>
 

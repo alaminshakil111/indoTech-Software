@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { useNavigate } from "react-router-dom";
 
+
 import ictManaged from "../assets/images/services/itmanaged/managed-services23.jpg";
-import developerAi from "../assets/images/services/artifficial/developer-ai-349.png";
+import developerAi from "../assets/images/services/artifficial/ai&AumtationCard.jpg";
 import softwareBanner from "../assets/images/services/softwareDev/softwareBanner.avif";
 import zeroTrustBanner from "../assets/images/services/zeroTrust/photo-1550751827-4bd374c3f58b.avif";
 import consultancyBanner from "../assets/images/consultancy/business/businessBanner.jpg";
@@ -67,7 +67,7 @@ const Services = () => {
   return (
     <section className="w-full bg-gray-50">
       <div className="containerCustom mx-auto px-4 py-10 lg:py-[75px] relative ">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0072B5] uppercase " 
+        <h2 className="text-3xl md:text-4xl lg:text-5xl mb-5 font-bold text-[#0072B5] uppercase " 
         style={{
             textShadow: `
               rgb(166 215 255 / 70%) 1px 1px 10px, 
@@ -79,7 +79,7 @@ const Services = () => {
 
         <div className="relative">
           {/* Buttons OUTSIDE the Swiper */}
-          <div className=" flex gap-10 bg-[#015099]/35 rounded-br-[10px] rounded-bl-[10px] px-4 md:px-8 py-1 absolute 
+          <div className=" flex gap-10 bg-[#c4c9cd]/70 rounded-br-[10px] rounded-bl-[10px] px-4 md:px-8 py-1 absolute 
           top-[100%] right-0  " >
             <button ref={prevRef} className="cursor-pointer z-10 bg-[#4992C1] p-2 md:p-3 rounded-full text-white hover:shadow-xl hover:shadow-[#4992C1]/60 transition-all duration-300" >
               <HiArrowLongLeft size={18} className="text-white" />

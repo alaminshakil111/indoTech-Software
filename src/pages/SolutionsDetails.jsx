@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-
 import { solutionsData } from "../Data/SolutionsData";
 
 const SolutionsDetails = () => {
   const { id } = useParams();
-  const solution = solutionsData.find((s) => s.id === id);
   const location = useLocation();
+  const solution = solutionsData.find((s) => s.id === id);
 
-  if (!solution)
-    return <h2 className="text-center py-20 text-xl"> Solutions Not Found </h2>;
+  if (!solution) {
+    return (
+      <h2 className="text-center py-20 text-lg text-gray-600">
+        Solution Not Found
+      </h2>
+    );
+  }
 
-  const isObjectDetails = typeof solution.details === "object" && !Array.isArray(solution.details);
-  
+  const isObjectDetails =
+    typeof solution.details === "object" && !Array.isArray(solution.details);
+
   const dynamicTabs = isObjectDetails ? Object.keys(solution.details) : [];
 
   const initialIndex =
@@ -20,50 +25,58 @@ const SolutionsDetails = () => {
       ? location.state.tabIndex
       : 0;
 
-  
+  const [activeTab, setActiveTab] = useState(
+    dynamicTabs[initialIndex] || dynamicTabs[0] || null
+  );
 
-  const [activeTab, setActiveTab] = useState( dynamicTabs[initialIndex] || dynamicTabs[0] || null);
+  useEffect(() => {
+  if (dynamicTabs.length > 0) {
+    const index =
+      typeof location.state?.tabIndex === "number"
+        ? location.state.tabIndex
+        : 0;
 
-  // 🔥 Reset active tab whenever solution ID changes
-   useEffect(() => {
-    if (dynamicTabs.length > 0) {
-      const index =
-        typeof location.state?.tabIndex === "number"
-          ? location.state.tabIndex
-          : 0;
+    setActiveTab(dynamicTabs[index] || dynamicTabs[0]);
+  }
+}, [id]); // ✅ ONLY id
 
-      setActiveTab(dynamicTabs[index] || dynamicTabs[0]);
-    }
-  }, [id, dynamicTabs, location.state]);
 
   return (
-    <div className="dark:bg-[#192030]">
-      <div className="containerCustom px-4 py-10">
-        <img
-          loading="lazy"
-          src={solution.bannerImg}
-          className="w-full h-64 object-cover rounded-lg shadow"
-          alt={solution.title}
-        />
+    <div className="bg-[#f9fafb] dark:bg-[#0f172a]">
 
-        <h2 className="text-[24px] lg:text-[36px] font-bold text-[#0072B5] mt-6">
+      <img
+        loading="lazy"
+        src={solution.bannerImg}
+        alt={solution.title}
+        className="w-full h-56 object-cover  border border-gray-200"
+      />
+      <div className="containerCustom px-4 py-12">
+
+        {/* Title */}
+        <h2 className="mt-6 text-2xl lg:text-3xl font-semibold text-slate-800 dark:text-white tracking-tight">
           {solution.title}
         </h2>
-        <p className="textColor mt-1">{solution.subtitle}</p>
 
+        {/* Subtitle */}
+        <p className="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed">
+          {solution.subtitle}
+        </p>
+
+        {/* Layout */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Left Tabs */}
+
+          {/* Left Tabs (Desktop) */}
           {isObjectDetails && (
-            <div className="space-y-2 hidden md:block ">
+            <div className=" space-y-2">
               {dynamicTabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`w-full text-left px-4 py-3 rounded-lg font-medium transition cursor-pointer
+                  className={`w-full text-left px-4 py-3 rounded-md transition border cursor-pointer
                     ${
                       activeTab === tab
-                        ? "bg-[#0072B5] text-white shadow"
-                        : "bg-gray-100 dark:text-white dark:bg-[#151b2b] hover:bg-gray-200 dark:hover:bg-[#222e49]"
+                        ? "bg-white text-slate-900 border-slate-300 font-semibold"
+                        : "bg-transparent text-gray-600 border-transparent hover:border-gray-300"
                     }`}
                 >
                   {tab}
@@ -73,45 +86,53 @@ const SolutionsDetails = () => {
           )}
 
           {/* Right Content */}
-          <div className="md:col-span-3 textColor bg-white dark:bg-[#151b2b] p-6 rounded-lg shadow">
+          <div className=" rightContent md:col-span-3 bg-white dark:bg-[#0b1220] border border-gray-200 dark:border-gray-700 rounded-md p-6">
+
             {isObjectDetails && activeTab && solution.details[activeTab] && (
-              <div>
+              <div className="space-y-6">
+
+                {/* Heading */}
                 {solution.details[activeTab].heading && (
-                  <h3 className="text-lg font-semibold mb-2">
+                  <h3 className="text-base font-semibold text-slate-800 dark:text-gray-200">
                     {solution.details[activeTab].heading}
                   </h3>
                 )}
 
+                {/* Paragraph */}
                 {solution.details[activeTab].para1 && (
-                  <p className="textColor mb-4">
+                  <p className=" text-gray-700 dark:text-gray-300 leading-relaxed">
                     {solution.details[activeTab].para1}
                   </p>
                 )}
 
-                {/* FAQ Section */}
+                {/* FAQ */}
                 {solution.details[activeTab].faq && (
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold mb-2">Need Help?</h3>
-                    <ul className="list-disc ml-5 textColor">
+                  <div>
+                    <h3 className=" font-semibold text-slate-800 dark:text-gray-200 mb-2">
+                      Need Help ?
+                    </h3>
+                    <ul className="space-y-3">
                       {solution.details[activeTab].faq.map((item, i) => (
-                        <li key={i} className="mb-2">
-                          <strong>
+                        <li key={i}>
+                          <p className="font-medium text-slate-800 dark:text-white">
                             Q{i + 1}. {item.question}
-                          </strong>
-                          <p className="ml-4 textColor">{item.answer}</p>
+                          </p>
+                          <p className="ml-4 mt-1 text-gray-600 dark:text-gray-400">
+                            {item.answer}
+                          </p>
                         </li>
                       ))}
                     </ul>
                   </div>
                 )}
 
-                {/* Strengths Section */}
+                {/* Strengths */}
                 {solution.details[activeTab].strengths && (
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold mb-2">
+                  <div>
+                    <h3 className=" font-semibold text-slate-800 dark:text-gray-200 mb-2">
                       {solution.details[activeTab].strengths.title}
                     </h3>
-                    <ul className="list-disc ml-5 textColor">
+                    <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 space-y-1">
                       {solution.details[activeTab].strengths.items.map(
                         (item, i) => (
                           <li key={i}>{item}</li>
@@ -121,13 +142,13 @@ const SolutionsDetails = () => {
                   </div>
                 )}
 
-                {/* Support Section */}
+                {/* Support */}
                 {solution.details[activeTab].support && (
-                  <div className="mb-6">
-                    <h3 className="text-lg font-semibold mb-2">
+                  <div>
+                    <h3 className=" font-semibold text-slate-800 dark:text-gray-200 mb-2">
                       {solution.details[activeTab].support.title}
                     </h3>
-                    <ul className="list-disc ml-5 textColor">
+                    <ul className="list-disc ml-4  text-gray-700 dark:text-gray-300 space-y-1">
                       {solution.details[activeTab].support.items.map(
                         (item, i) => (
                           <li key={i}>{item}</li>
@@ -137,50 +158,52 @@ const SolutionsDetails = () => {
                   </div>
                 )}
 
+                {/* Image */}
                 {solution.details[activeTab].img && (
-                  <div className="mb-4 lg:my-10">
-                    <img
-                      loading="lazy"
-                      src={solution.details[activeTab].img}
-                      alt={activeTab}
-                      className="w-full h-auto rounded-md"
-                    />
-                  </div>
+                  <img
+                    loading="lazy"
+                    src={solution.details[activeTab].img}
+                    alt={activeTab}
+                    className="w-full rounded-md border border-gray-200"
+                  />
                 )}
+
               </div>
             )}
 
+            {/* Simple Array */}
             {!isObjectDetails && Array.isArray(solution.details) && (
-              <ul className="list-disc ml-5 textColor space-y-1">
+              <ul className="list-disc ml-4 text-gray-700 dark:text-gray-300 space-y-1">
                 {solution.details.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
             )}
-          </div>
 
-          {/* Mobile Tab Buttons */}
-          {isObjectDetails && (
-            <div className="space-y-2 md:hidden mt-4">
-              {dynamicTabs.map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => {
-                    setActiveTab(tab);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                  className={`w-full text-left px-4 py-3 rounded-lg font-medium transition cursor-pointer
-                    ${
-                      activeTab === tab
-                        ? "bg-[#0072B5] text-white shadow"
-                        : "bg-gray-100 dark:text-white dark:bg-[#151b2b] hover:bg-gray-200 dark:hover:bg-[#222e49]"
-                    }`}
-                >
-                  {tab}
-                </button>
-              ))}
-            </div>
-          )}
+            {/* Mobile Tabs */}
+            {isObjectDetails && (
+              <div className="mt-6 space-y-2 md:hidden">
+                {dynamicTabs.map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => {
+                      setActiveTab(tab);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    className={`w-full px-4 py-3 border rounded-md transition
+                      ${
+                        activeTab === tab
+                          ? "border-slate-400 bg-white"
+                          : "border-gray-200 bg-gray-50"
+                      }`}
+                  >
+                    {tab}
+                  </button>
+                ))}
+              </div>
+            )}
+
+          </div>
         </div>
       </div>
     </div>
